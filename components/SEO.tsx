@@ -7,8 +7,8 @@ export const SEO: React.FC = () => {
   const { language } = useLanguage();
 
   const title = language === 'zh-TW' 
-    ? '陳彥嘉 Yen-Chia Chen | 機器學習工程師 & 工藝師'
-    : 'Yen-Chia Chen | Engineer & Artisan';
+    ? '陳彥家 | 機器學習 x 全端 x 網球'
+    : 'Yen-Chia Chen | ML x Full Stack x Tennis';
   
   const description = language === 'zh-TW'
     ? '受日式極簡美學啟發的個人作品集。展示機器學習工程與前端工藝的結合。'
