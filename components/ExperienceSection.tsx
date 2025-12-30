@@ -12,11 +12,10 @@ export const ExperienceSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
         
         <div className="lg:col-span-4 sticky top-32 h-fit">
-            <h2 className="font-serif text-4xl text-ink leading-tight mb-6">
-                The <br/> Journey.
+            <h2 className="font-serif text-4xl text-ink leading-tight mb-6" dangerouslySetInnerHTML={{ __html: t('experience.title') }}>
             </h2>
             <p className="font-sans font-light text-sub leading-relaxed mb-8">
-                A path of continuous refinement, moving from foundational research to architectural leadership.
+                {t('experience.sub')}
             </p>
             {/* Decoration */}
             <div className="w-16 h-16 opacity-10">

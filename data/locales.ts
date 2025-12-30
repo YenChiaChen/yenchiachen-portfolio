@@ -3,7 +3,7 @@ const zhTW = {
   nav: {
     about: '關於',
     skills: '技術',
-    projects: '專案',
+    projects: '作品集',
     blog: '筆記',
     awards: '獲獎',
     experience: '經歷',
@@ -13,7 +13,7 @@ const zhTW = {
     role: '機器學習 x 全端 x 運動員',
     name_first: '陳彥家',
     name_last: '',
-    value_prop: '以運動員的紀律，打造 <span class="text-seal font-medium italic">智慧介面</span> 與系統工藝。',
+    value_prop: '無論是找我打 <span class="text-seal font-bold italic">Code</span> 還是打 <span class="text-seal font-bold italic">球</span> 都可以。',
     credentials: {
       academic: { label: '學術學位', value: '資訊工程碩士', sub: '國立台灣科技大學' },
       award: { label: '體育經驗', value: '20年+ 網球選手', sub: '台北代表隊' },
@@ -26,7 +26,7 @@ const zhTW = {
     philosophy_label: '核心哲學',
     philosophy_quote: '「追求卓越，成功自然會找上門。」',
     badge: '關於我',
-    title: "極致過程的實踐者",
+    title: "",
     intro: "我畢業於國立台灣科技大學 <span class=\"text-seal font-semibold\">資工碩士班</span>。<br /><br />從小到大，我的生活是一場無止盡的跨界探索：參加過網球、桌球、羽球、游泳校隊；進過美術班、數資班、圍棋班；學過鋼琴、木琴、吉他與小提琴；爬過玉山、合歡山、中橫與南橫。<br /><br />這些經歷讓我深信，<span class=\"text-seal font-semibold\">重視「過程體驗」遠大於結果，使我能全神貫注於不斷迭代的優化與自我要求上</span>。對我而言，<span class=\"text-seal font-semibold\">卓越的成果只是專注與自律後的必然產物</span>。在我的經驗中，結果通常都會很不錯 :>",
     pillars: {
       foundation: {
@@ -61,26 +61,24 @@ const zhTW = {
   },
   projects: {
     index: '03 — 精選作品',
-    title: '工藝與 <span class="italic text-sub">體驗。</span>',
+    title: '<span class="italic text-sub">作品</span>集 ',
     sub: '透過詳實的案例研究，在嚴謹的工程與以人為本的設計哲學之間架起橋樑。',
     categories: {
       all: '全部',
       web: 'Web 應用',
-      mobile: '行動 App',
-      ai: 'AI / Bot',
-      brand: '品牌識別'
+      ai: 'AI',
     },
     loading: '正在調閱檔案...',
     case_study_label: '案例研究',
-    tech_stack: '技術堆疊',
+    tech_stack: '關鍵字',
     role_label: '擔綱角色',
     role_value: '技術領軍 / UX 設計',
     end_archive: '專案檔案閱覽結束',
     close: '關閉案例'
   },
   blog: {
-    title: '工程日誌',
-    sub: '/ 共享智慧',
+    title: '筆記',
+    sub: '/ 工人智慧',
     index: '03 — 筆記',
     categories: {
       all: '全部',
@@ -98,11 +96,13 @@ const zhTW = {
   experience: {
     index: '04 — 時間軸',
     title: '職涯 <br/> 旅程。',
-    sub: '一段持續精進的過程，從基礎研究走向架構領導者。',
+    sub: '本來是匆匆忙忙連滾帶爬',
     items: [
-      { role: "全端工程師 (自由職業)", company: "個人工作室", period: "2021 – 至今", desc: ["專精於高效能 Web 應用的 React 與 TypeScript 生態系。", "交付具備複雜資料視覺化的生產級 ESG 平台。", "提供 SEO 優化與零信任安全架構顧問服務。"] },
-      { role: "共同創辦人 & CTO", company: "Homie Studio", period: "2019 – 2021", desc: ["主導技術策略與產品路線圖規劃。", "帶領獲獎金融科技產品 (PP-Bank).", "管理敏捷開發週期與跨部門協作。"] },
-      { role: "研發工程師", company: "至上電子", period: "2016 – 2018", desc: ["使用 C# .NET 架構開發內部 ERP/MIS 系統。", "現代化舊有程式碼庫，將可維護性提升 40%。", "優化高流量交易的資料庫查詢。"] }
+      { role: "全端工程師", company: "個人工作室", period: "2021 – 至今", desc: ["精通 TypeScript / React / Go 生態系。", "為上市公司提供 ESG 平台、CMS 後台與品牌形象網站開發。", "對我而言，寫 Code 是冥想的一種。"] },
+      { role: "共同創辦人 & CTO", company: "Homie Studio", period: "2019 – 2021", desc: ["負責 Swift / Java 行動應用開發。", "研發多款獲獎產品，包含金融與居家服務 App。", "曾經有過連續 56 小時在線 Debug 的紀錄。"] },
+      { role: "研發工程師", company: "至上電子", period: "2016 – 2018", desc: ["使用 C# / .NET / MySQL 構建企業基礎設施。", "開發與維護內部 MIS 與 ERP 系統。", "精通每半小時去茶水間裝一次水之術。"] },
+      { role: "學士 / 碩士", company: "臺灣科技大學", period: "2017 – 2025", desc: ["專研 C++ / Python 與深度學習應用。", "主導多項產學合作與資安國際論文發表。", "大一時曾因簽證問題被 UCLA 退學。"] }
+
     ]
   },
   awards: {
@@ -112,7 +112,7 @@ const zhTW = {
       { year: "2020", title: "第一名 (冠軍)", organization: "LINE Chatbot 對話機器人設計大賽", description: "開發「Shooly」，一個創新的水電服務預約機器人。" },
       { year: "2019-2020", title: "創業賽事常勝軍", organization: "經濟部 / 科技部 / 教育部", description: "獲選「創業歸故里」決賽團隊、FITI 激勵計畫全國 40 強、教育部 U-Start 補助，專注於創新技術轉商。" },
       { year: "2019", title: "第二名", organization: "中科智慧創新創業競賽", description: "開發線上智慧展覽館，讓使用者能在網站上身歷其境探索各種展覽。" },
-      { year: "2019-2021", title: "網球成就", organization: "全大運 / 台科精誠盃", description: "十二年體保生生涯，曾獲台北市冠軍、大專盃團體第三、台科精誠盃男單冠軍，並擔任台科大網球隊隊長。" },
+      { year: "2003-至今", title: "網球成就", organization: "全大運 / 台科精誠盃", description: "十二年體保生生涯，曾獲台北市冠軍、大專盃團體第三、台科精誠盃男單冠軍，並擔任台科大網球隊隊長。" },
       { year: "2019-2021", title: "培育與研究計畫", organization: "資策會 / 台灣科技大學 / 竹科 / 中科", description: "入選資策會數位沙盒研究計畫，並受多個科學園區育成中心培育。" }
     ]
   },
@@ -201,9 +201,7 @@ const en = {
     categories: {
       all: 'All',
       web: 'Web App',
-      mobile: 'Mobile',
-      ai: 'AI / Bot',
-      brand: 'Branding'
+      ai: 'AI',
     },
     loading: 'Retrieving files...',
     case_study_label: 'Case Study',
@@ -235,9 +233,10 @@ const en = {
     title: 'Career <br/> Journey.',
     sub: 'A continuous process of refinement, from foundational research to architectural leadership.',
     items: [
-      { role: "Full Stack Engineer (Freelance)", company: "Personal Studio", period: "2021 – Present", desc: ["Specialized in React & TypeScript for high-performance web applications.", "Delivered production-grade ESG platforms with complex data visualization.", "Consulting for SEO and Zero Trust security architectures."] },
-      { role: "Co-Founder & CTO", company: "Homie Studio", period: "2019 – 2021", desc: ["Led technical strategy and product roadmap.", "Spearheaded the award-winning Fintech product 'PP-Bank'.", "Managed agile development cycles and cross-functional collaboration."] },
-      { role: "R&D Engineer", company: "Supreme Electronics", period: "2016 – 2018", desc: ["Developed internal ERP/MIS systems using C# .NET.", "Modernized legacy codebases, improving maintainability by 40%.", "Optimized database queries for high-volume transactions."] }
+      { role: "Full Stack Engineer", company: "Freelance Studio", period: "2021 – Present", desc: ["Expertise in TypeScript, React, and Go ecosystems.", "Delivering ESG platforms, CMS backends, and brand sites for listed companies.", "For me, coding is a form of meditation."] },
+      { role: "Co-Founder & CTO", company: "Homie Studio", period: "2019 – 2021", desc: ["Mobile development with Swift and Java.", "Led the development of multiple award-winning products.", "Legendary record of debugging for 56 hours straight."] },
+      { role: "R&D Engineer", company: "Supreme Electronics", period: "2016 – 2018", desc: ["Built enterprise infrastructure using C#, .NET, and MySQL.", "Developed and maintained internal MIS and ERP systems.", "Mastered the art of refilling my water bottle every 30 minutes."] },
+      { role: "B.S. & M.S.", company: "NTUST", period: "2017 – 2025", desc: ["Focused on C++, Python, and Deep Learning applications.", "Led industry-academic projects and published international security papers.", "Briefly dropped out of UCLA as a freshman due to visa issues (a wild plot twist)."] }
     ]
   },
   awards: {

@@ -11,6 +11,8 @@ interface ParsedFile {
     hasFrontmatter: boolean;
 }
 
+const DEFAULT_LANGUAGE = 'zh-TW';
+
 /**
  * Parses a raw markdown string to separate Frontmatter (YAML-like) from content.
  */
@@ -97,19 +99,23 @@ const getAssetPath = (path: string) => {
 /**
  * Smart loader that composites metadata and content based on availability.
  * Strategy:
- * 1. Fetch Root file (Canonical Source of Truth for Metadata)
- * 2. Fetch Localized file
+ * 1. Fetch Root file (Canonical Source of Truth for Metadata + Default Language Content)
+ * 2. Fetch Localized file (ONLY if language is NOT default)
  * 3. Merge: Use Localized Content + Localized Metadata (if exists) OR Root Metadata
  */
 const loadEntry = async <T>(type: 'projects' | 'posts', slug: string, language: string): Promise<T | null> => {
-    // Use getAssetPath to ensure we fetch from /repo-name/projects/... instead of /projects/...
+    // Root path (e.g., /posts/slug.md) -> Contains Shared Metadata + Default Language (zh-TW) Content
     const rootPath = getAssetPath(`${type}/${slug}.md`);
-    const localizedPath = getAssetPath(`${type}/${language}/${slug}.md`);
+    
+    // Localized path (e.g., /posts/en/slug.md)
+    // Optimization: If language IS the default language (zh-TW), we do not need to check a subfolder.
+    const shouldFetchLocalized = language !== DEFAULT_LANGUAGE && language !== '';
+    const localizedPath = shouldFetchLocalized ? getAssetPath(`${type}/${language}/${slug}.md`) : null;
 
     // Fetch in parallel
     const [rootText, localizedText] = await Promise.all([
         fetchRaw(rootPath),
-        language !== 'en' && language !== '' ? fetchRaw(localizedPath) : Promise.resolve(null)
+        localizedPath ? fetchRaw(localizedPath) : Promise.resolve(null)
     ]);
 
     // If absolutely nothing exists, return null
@@ -144,6 +150,8 @@ const loadEntry = async <T>(type: 'projects' | 'posts', slug: string, language: 
     return {
         slug,
         ...finalMetadata,
+        // Helper to ensure category exists for filtering
+        category: finalMetadata.category || 'Uncategorized' 
     } as unknown as T;
 };
 
@@ -164,21 +172,26 @@ export const loadMarkdownContent = async <T>(type: 'projects' | 'posts', languag
 
 /**
  * Gets the full content of a specific file.
- * Reuses the same logic to ensure consistency (e.g. if localized file has no frontmatter, we still get the content).
+ * Reuses the same logic to ensure consistency.
  */
 export const getMarkdownContent = async (type: 'projects' | 'posts', slug: string, language: string): Promise<string> => {
     const rootPath = getAssetPath(`${type}/${slug}.md`);
-    const localizedPath = getAssetPath(`${type}/${language}/${slug}.md`);
+    
+    // Optimization: Skip subfolder check for default language
+    const shouldFetchLocalized = language !== DEFAULT_LANGUAGE && language !== '';
+    const localizedPath = shouldFetchLocalized ? getAssetPath(`${type}/${language}/${slug}.md`) : null;
 
     // Try localized first
-    let text = await fetchRaw(localizedPath);
-    if (text) {
-        const parsed = parseFrontmatter(text);
-        return parsed.content;
+    if (localizedPath) {
+        let text = await fetchRaw(localizedPath);
+        if (text) {
+            const parsed = parseFrontmatter(text);
+            return parsed.content;
+        }
     }
 
-    // Fallback to root
-    text = await fetchRaw(rootPath);
+    // Fallback to root (Default Language)
+    let text = await fetchRaw(rootPath);
     if (text) {
         const parsed = parseFrontmatter(text);
         return parsed.content;

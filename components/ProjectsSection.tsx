@@ -44,7 +44,7 @@ export const ProjectsSection: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   // Derive unique categories
-  const categoryKeys = useMemo(() => ['all', 'web', 'mobile', 'ai', 'brand'], []);
+  const categoryKeys = useMemo(() => ['all', 'web', 'ai'], []);
 
   // 1. Filter Projects
   const filteredProjects = useMemo(() => {
@@ -53,9 +53,7 @@ export const ProjectsSection: React.FC = () => {
     // Mapping internal category keys to display strings found in markdown frontmatter
     const catMap: Record<string, string> = {
         'web': 'Web App',
-        'mobile': 'Mobile',
-        'ai': 'AI / Bot',
-        'brand': 'Branding'
+        'ai': 'AI',
     };
     
     // Check against mapped value or direct value (case-insensitive for robustness)
@@ -136,6 +134,10 @@ export const ProjectsSection: React.FC = () => {
         
         <div className="flex flex-col lg:flex-row justify-between lg:items-end mb-12 gap-8">
             <div className="max-w-xl">
+                <span className="font-mono text-xs text-seal uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-seal"></span>
+                    {projects.index}
+                </span>
                 <h2 
                   className="font-serif text-4xl md:text-5xl text-ink leading-tight relative z-10"
                   dangerouslySetInnerHTML={{ __html: projects.title }}
@@ -245,22 +247,18 @@ export const ProjectsSection: React.FC = () => {
                                 <div className="flex items-center gap-3 mb-4">
                                     <span className="font-mono text-xs text-accent uppercase tracking-widest">{selectedProject.type}</span>
                                     {selectedProject.achievement && (
-                                        <span className="px-2 py-0.5 bg-seal/10 text-seal text-[9px] uppercase tracking-wide border border-seal/20">{selectedProject.achievement}</span>
+                                        <span className="px-2 py-0.5 bg-seal text-white text-[9px] uppercase tracking-wide border border-seal/20">{selectedProject.achievement}</span>
                                     )}
                                 </div>
                                 <h1 className="font-serif text-4xl md:text-5xl text-ink leading-tight mb-8">
                                     {selectedProject.title}
                                 </h1>
-                                <div className="grid grid-cols-2 gap-8 font-sans">
+                                <div className="font-sans">
                                     <div>
                                         <div className="text-[10px] font-mono text-sub uppercase tracking-widest mb-1">{projects.tech_stack}</div>
                                         <div className="flex flex-wrap gap-2">
                                             {selectedProject.tags?.map(tag => <span key={tag} className="text-sm text-ink">{tag}</span>)}
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div className="text-[10px] font-mono text-sub uppercase tracking-widest mb-1">{projects.role_label}</div>
-                                        <div className="text-sm text-ink">{projects.role_value}</div>
                                     </div>
                                 </div>
                             </div>
@@ -323,8 +321,14 @@ const ProjectCard: React.FC<{ project: Project; index: number; className?: strin
         <div className="relative z-10 pr-2 flex flex-col flex-1">
             <div className="flex justify-between items-start flex-1">
                 <div>
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
                         <span className="font-mono text-[10px] text-accent uppercase tracking-wider">{project.category}</span>
+                        {/* Added Achievement Badge with Red Background */}
+                        {project.achievement && (
+                            <span className="px-2 py-0.5 bg-seal text-white text-[9px] font-mono uppercase tracking-widest shadow-sm rounded-sm">
+                                {project.achievement}
+                            </span>
+                        )}
                     </div>
                     <h3 className="font-serif text-2xl text-ink group-hover:text-seal transition-colors duration-300 mb-2 leading-tight">
                         {project.title}

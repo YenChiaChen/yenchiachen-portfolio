@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -42,16 +43,37 @@ export const Navbar: React.FC = () => {
           </a>
 
           <div className="hidden md:flex items-center gap-12">
-             {navItems.map((item) => (
-               <a 
-                 key={item.label} 
-                 href={item.href}
-                 className="font-mono text-[10px] uppercase tracking-[0.4em] text-sub hover:text-seal transition-all duration-300 relative group"
-               >
-                 {item.label}
-                 <span className="absolute -bottom-1 left-1/2 w-0 h-px bg-seal transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-               </a>
-             ))}
+             {navItems.map((item) => {
+               if (item.href === '#projects') {
+                 return (
+                   <a 
+                     key={item.label}
+                     href={item.href}
+                     className="relative group px-6 py-2 transition-transform duration-300 hover:-translate-y-1"
+                   >
+                     <div className="absolute inset-0 bg-seal shadow-lg shadow-seal/30 transition-all duration-300 group-hover:shadow-seal/50
+                                     rounded-tl-[20px] rounded-tr-[5px] rounded-br-[15px] rounded-bl-[25px] 
+                                     transform -rotate-2 group-hover:rotate-1 group-hover:scale-105">
+                     </div>
+                     
+                     <span className="relative z-10 font-mono text-[10px] uppercase tracking-[0.2em] text-white font-semibold">
+                         {item.label}
+                     </span>
+                   </a>
+                 );
+               }
+               
+               return (
+                 <a 
+                   key={item.label} 
+                   href={item.href}
+                   className="font-mono text-[10px] uppercase tracking-[0.4em] text-sub hover:text-seal transition-all duration-300 relative group"
+                 >
+                   {item.label}
+                   <span className="absolute -bottom-1 left-1/2 w-0 h-px bg-seal transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                 </a>
+               );
+             })}
              
              <button 
                 onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')}
@@ -78,7 +100,7 @@ export const Navbar: React.FC = () => {
                  key={item.label} 
                  href={item.href}
                  onClick={() => setIsMenuOpen(false)}
-                 className="font-serif text-5xl text-ink hover:text-seal transition-colors"
+                 className={`font-serif text-5xl transition-colors ${item.href === '#projects' ? 'text-seal font-bold' : 'text-ink hover:text-seal'}`}
                >
                  {item.label}
                </a>

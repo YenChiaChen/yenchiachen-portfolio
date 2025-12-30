@@ -49,9 +49,6 @@ export const SkillsSection: React.FC = () => {
             <h2 className="font-serif text-4xl text-ink">
               {t("skills.title")}
             </h2>
-            <span className="font-mono text-xs text-accent tracking-widest uppercase hidden md:block">
-              {t("skills.index")}
-            </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
