@@ -1,6 +1,6 @@
 ---
 title: A Reconfigurable Process Element Design for Edge AI: Concepts and Structures
-category: ML
+category: EDGE
 type: Course Note
 achievement: 課程筆記
 tags: [Edge AI, AI Accelerator, Reconfigurable PE, Quantization, CNN]

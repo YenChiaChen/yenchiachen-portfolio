@@ -1,6 +1,6 @@
 ---
 title: Winograd Architecture Design for Edge AI Accelerator
-category: ML
+category: EDGE
 type: Course Notes
 achievement: 課程筆記
 tags: [AI Accelerator, Winograd Algorithm, Edge AI, CNN Optimization, Hardware-Algorithm Co-design]

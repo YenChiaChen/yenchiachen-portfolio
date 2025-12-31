@@ -84,8 +84,11 @@ const zhTW = {
       all: '全部',
       frontend: '前端',
       backend: '後端',
-      ml: '機器學習',
-      security: '資安'
+      ml: 'AI應用',
+      security: '資安',
+      hai: "AI人機介面",
+      infra: "AI基礎建設",
+      edge:"邊緣運算"
     },
     loading: '正在調閱手稿...',
     reading_mode: '閱讀模式',
@@ -234,8 +237,11 @@ const en = {
       all: 'All',
       frontend: 'Frontend',
       backend: 'Backend',
-      ml: 'Machine Learning',
-      security: 'Security'
+      ml: 'AI Applications',
+      security: 'Security',
+      hai: "Human–AI Interaction",
+      infra: "AI Infrastructure",
+      edge:"Edge AI"
     },
     loading: 'Retrieving drafts...',
     reading_mode: 'Reading Mode',

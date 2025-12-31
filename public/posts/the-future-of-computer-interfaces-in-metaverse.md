@@ -1,6 +1,6 @@
 ---
 title: The Future of Computer Interfaces in Metaverse
-category: ML
+category: HAI
 type: Course Notes
 achievement: 課程筆記
 tags: [Human-Computer Interaction, Metaverse, Wearable Devices, Sensors, Machine Learning]

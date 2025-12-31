@@ -1,6 +1,6 @@
 ---
 title: Machine Learning Enabled Minimal Latency Wireless Networking for Emerging AI Applications
-category: ML
+category: INFRA
 type: Course Notes
 achievement: 課程筆記
 tags: [Networked AI, Wireless Networking, Multi-Agent Systems, Edge AI, Cyber-Physical Systems]

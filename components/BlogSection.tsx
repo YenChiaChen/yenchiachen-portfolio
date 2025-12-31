@@ -44,7 +44,7 @@ export const BlogSection: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const categoryKeys = useMemo(() => ['all', 'frontend', 'backend', 'ml', 'security'], []);
+  const categoryKeys = useMemo(() => ['all', 'ml', 'edge', 'infra', 'hai'], []);
 
   // 1. Filter Posts
   const filteredPosts = useMemo(() => {
