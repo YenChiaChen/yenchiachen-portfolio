@@ -60,7 +60,7 @@ const zhTW = {
     }
   },
   projects: {
-    index: '03 — 精選作品',
+    index: '02 — 精選作品',
     title: '<span class="italic text-sub">作品</span>集 ',
     sub: '透過詳實的案例研究，在嚴謹的工程與以人為本的設計哲學之間架起橋樑。',
     categories: {
@@ -210,7 +210,7 @@ const en = {
     }
   },
   projects: {
-    index: '03 — Selected Works',
+    index: '02 — Selected Works',
     title: '<span class="italic text-sub">Project</span> Collection',
     sub: 'Building bridges between rigorous engineering and human-centered design through concrete case studies.',
     categories: {

@@ -9,7 +9,6 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { BlogSection } from './components/BlogSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { AwardsSection } from './components/AwardsSection';
-import { AcademicWorkSection } from './components/AcademicWorkSection';
 import { ContactSection } from './components/ContactSection';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Preloader } from './components/Preloader';
@@ -20,10 +19,6 @@ const Footer = () => {
   return (
     <footer className="bg-bg border-t border-line py-12 relative z-10">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-sub tracking-widest uppercase">
-        <div className="flex items-center gap-2">
-           <span className="w-2 h-2 bg-accent rounded-full"></span>
-           <span>Designed in Taipei</span>
-        </div>
         <div className="mt-4 md:mt-0 opacity-50">&copy; {currentYear} Yen-Chia Chen.</div>
       </div>
     </footer>

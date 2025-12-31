@@ -253,16 +253,12 @@ export const ProjectsSection: React.FC = () => {
                                 <h1 className="font-serif text-4xl md:text-5xl text-ink leading-tight mb-8">
                                     {selectedProject.title}
                                 </h1>
-                                <div className="grid grid-cols-2 gap-8 font-sans">
+                                <div className="gap-8 font-sans">
                                     <div>
                                         <div className="text-[10px] font-mono text-sub uppercase tracking-widest mb-1">{projects.tech_stack}</div>
                                         <div className="flex flex-wrap gap-2">
                                             {selectedProject.tags?.map(tag => <span key={tag} className="text-sm text-ink">{tag}</span>)}
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div className="text-[10px] font-mono text-sub uppercase tracking-widest mb-1">{projects.role_label}</div>
-                                        <div className="text-sm text-ink">{projects.role_value}</div>
                                     </div>
                                 </div>
                             </div>
