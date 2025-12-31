@@ -121,6 +121,7 @@ export const BlogSection: React.FC = () => {
         {/* Header & Filter System */}
         <div className="flex flex-col lg:flex-row justify-between lg:items-end mb-12 gap-8 border-b border-line pb-6">
              <div className="space-y-4">
+                <span className="font-mono text-[10px] text-accent uppercase tracking-[0.4em]">{blog.index}</span>
                 <div className="flex items-baseline gap-4">
                    <h2 className="font-serif text-4xl text-ink">{blog.title}</h2>
                    <span className="font-mono text-xs text-sub uppercase tracking-widest hidden sm:inline">{blog.sub}</span>
@@ -262,7 +263,7 @@ export const BlogSection: React.FC = () => {
                             <span className="font-mono text-xs text-sub animate-pulse">{blog.loading}</span>
                         </div>
                     ) : (
-                        <article className="animate-fade-in">
+                        <article className="animate-fade-in pb-20">
                             <div className="mb-12 border-b border-line pb-8">
                                 <div className="flex justify-between items-start mb-6">
                                     <div className="font-mono text-xs text-accent uppercase tracking-widest">{selectedPost.date}</div>
@@ -303,6 +304,17 @@ export const BlogSection: React.FC = () => {
                         </article>
                     )}
                 </div>
+            </div>
+
+            {/* Mobile Floating Close Button - Outside the transformed container to fix position */}
+            <div className={`lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-[110] ${isClosing ? 'animate-fade-out' : 'animate-fade-in'}`}>
+                <button 
+                    onClick={closePost}
+                    className="flex items-center gap-2 px-6 py-3 bg-bg/90 backdrop-blur-md border border-line rounded-full shadow-xl text-ink hover:text-seal hover:border-seal transition-all duration-300 active:scale-95"
+                >
+                    <X size={16} />
+                    <span className="font-mono text-xs uppercase tracking-widest">{blog.back}</span>
+                </button>
             </div>
         </div>
       )}

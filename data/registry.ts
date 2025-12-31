@@ -1,14 +1,8 @@
 
 export const projectSlugs = [
-  'esg-platform',
-  'pp-bank',
-  'shooly-bot',
-  'blackball'
+  'master-thesis',
 ];
 
 export const blogSlugs = [
-  'react-19-server-components',
-  'zero-trust-microservices',
-  'tensorflow-edge-optimization',
-  'peak-performance'
+
 ];

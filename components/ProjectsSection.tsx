@@ -242,7 +242,7 @@ export const ProjectsSection: React.FC = () => {
                             <span className="font-mono text-xs text-sub animate-pulse">{projects.loading}</span>
                         </div>
                     ) : (
-                        <article className="animate-fade-in">
+                        <article className="animate-fade-in pb-20">
                             <div className="mb-12 border-b border-line pb-8">
                                 <div className="flex items-center gap-3 mb-4">
                                     <span className="font-mono text-xs text-accent uppercase tracking-widest">{selectedProject.type}</span>
@@ -253,12 +253,16 @@ export const ProjectsSection: React.FC = () => {
                                 <h1 className="font-serif text-4xl md:text-5xl text-ink leading-tight mb-8">
                                     {selectedProject.title}
                                 </h1>
-                                <div className="font-sans">
+                                <div className="grid grid-cols-2 gap-8 font-sans">
                                     <div>
                                         <div className="text-[10px] font-mono text-sub uppercase tracking-widest mb-1">{projects.tech_stack}</div>
                                         <div className="flex flex-wrap gap-2">
                                             {selectedProject.tags?.map(tag => <span key={tag} className="text-sm text-ink">{tag}</span>)}
                                         </div>
+                                    </div>
+                                    <div>
+                                        <div className="text-[10px] font-mono text-sub uppercase tracking-widest mb-1">{projects.role_label}</div>
+                                        <div className="text-sm text-ink">{projects.role_value}</div>
                                     </div>
                                 </div>
                             </div>
@@ -288,6 +292,17 @@ export const ProjectsSection: React.FC = () => {
                         </article>
                     )}
                 </div>
+            </div>
+
+            {/* Mobile Floating Close Button - Outside the transformed container to fix position */}
+            <div className={`lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-[110] ${isClosing ? 'animate-fade-out' : 'animate-fade-in'}`}>
+                <button 
+                    onClick={closeProject}
+                    className="flex items-center gap-2 px-6 py-3 bg-bg/90 backdrop-blur-md border border-line rounded-full shadow-xl text-ink hover:text-seal hover:border-seal transition-all duration-300 active:scale-95"
+                >
+                    <X size={16} />
+                    <span className="font-mono text-xs uppercase tracking-widest">{projects.close}</span>
+                </button>
             </div>
         </div>
       )}

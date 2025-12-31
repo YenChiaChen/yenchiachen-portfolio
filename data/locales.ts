@@ -101,7 +101,7 @@ const zhTW = {
       { role: "全端工程師", company: "個人工作室", period: "2021 – 至今", desc: ["精通 TypeScript / React / Go 生態系。", "為上市公司提供 ESG 平台、CMS 後台與品牌形象網站開發。", "對我而言，寫 Code 是冥想的一種。"] },
       { role: "共同創辦人 & CTO", company: "Homie Studio", period: "2019 – 2021", desc: ["負責 Swift / Java 行動應用開發。", "研發多款獲獎產品，包含金融與居家服務 App。", "曾經有過連續 56 小時在線 Debug 的紀錄。"] },
       { role: "研發工程師", company: "至上電子", period: "2016 – 2018", desc: ["使用 C# / .NET / MySQL 構建企業基礎設施。", "開發與維護內部 MIS 與 ERP 系統。", "精通每半小時去茶水間裝一次水之術。"] },
-      { role: "學士 / 碩士", company: "臺灣科技大學", period: "2017 – 2025", desc: ["專研 C++ / Python 與深度學習應用。", "主導多項產學合作與資安國際論文發表。", "大一時曾因簽證問題被 UCLA 退學。"] }
+      { role: "學士 / 碩士", company: "臺灣科技大學", period: "2017 – 2025", desc: ["專研 C++ / Python 與深度學習應用。", "主導多項產學合作與資安國際論文發表。", "為了跑贏OJ把C的空格全部移掉。"] }
 
     ]
   },
@@ -116,21 +116,16 @@ const zhTW = {
       { year: "2019-2021", title: "培育與研究計畫", organization: "資策會 / 台灣科技大學 / 竹科 / 中科", description: "入選資策會數位沙盒研究計畫，並受多個科學園區育成中心培育。" }
     ]
   },
-  academic: {
-    title: '研究基石',
-    items: [
-      { title: "碩士論文：CNN 效能預測", desc: "提出一個基於資料複雜度即可估算 CNN 準確率的框架，無需完整訓練。" },
-      { title: "資安日誌異常偵測 (鎧俠 KIOXIA)", desc: "建立深度學習模型偵測系統日誌異常，用於零信任架構實作。" },
-      { title: "容器基礎設施分析 (集保中心)", desc: "針對高負載金融系統進行 K8s、VM 與 Bare Metal 的效能權衡分析。" },
-      { title: "事故肇責預測 (HGIGA)", desc: "基於 NLP 文本探勘事故報告，協助判定法律責任的輔助系統。" }
-    ]
-  },
   contact: {
-    title: '讓我們 <span class="italic text-sub">聊聊。</span>',
-    desc: '我目前開放新的合作機會。無論是對我的研究有疑問、專案提案，或者只是想討論哪支網球拍最好打，我都隨時歡迎。',
-    copy: '複製 Email 地址',
+    title: '聯絡資訊',
+    desc: '感謝您的來訪。若有合作需求或任何指教，歡迎透過電子郵件與我聯繫。',
+    email_label: '電子信箱',
+    social_label: '社群連結',
+    copy: '複製',
     copied: '已複製',
-    locations: ['台北', 'LinkedIn', 'GitHub']
+    links: [
+      { label: 'GitHub', url: 'https://github.com/YenChiaChen' },
+    ]
   }
 };
 
@@ -138,52 +133,72 @@ const en = {
   nav: {
     about: 'About',
     skills: 'Skills',
-    projects: 'Projects',
+    projects: 'Portfolio',
     blog: 'Notes',
     awards: 'Awards',
     experience: 'Experience',
     contact: 'Contact',
   },
   hero: {
-    role: 'ML x Full Stack x Athlete',
+    role: 'Machine Learning x Full Stack x Athlete',
     name_first: 'Yen-Chia',
     name_last: 'Chen',
-    value_prop: 'Building <span class="text-seal font-medium italic">intelligent interfaces</span> and system craft with an athlete’s discipline.',
+    value_prop: 'Whether you want to play <span class="text-seal font-bold italic">Code</span> or play <span class="text-seal font-bold italic">ball</span>, I’m in.',
     credentials: {
-      academic: { label: 'Academic', value: 'M.S. in CS', sub: 'Natl. Taiwan Univ. of Sci & Tech' },
-      award: { label: 'Athletics', value: '20Y+ Tennis Player', sub: 'Taipei Representative Team' },
-      exp: { label: 'Experience', value: '6Y+ Production', sub: 'ML & Full-stack Systems' }
+      academic: {
+        label: 'Academic Degree',
+        value: 'M.S. in Computer Science',
+        sub: 'National Taiwan University of Science and Technology'
+      },
+      award: {
+        label: 'Athletic Experience',
+        value: '20+ Years Tennis Player',
+        sub: 'Taipei Representative Team'
+      },
+      exp: {
+        label: 'Practical Experience',
+        value: '6+ Years Product-level Development',
+        sub: 'ML & Full-stack Systems'
+      }
     },
-    scroll: 'Scroll to Explore'
+    scroll: 'Scroll Down'
   },
   about: {
     index: 'Index 01 — Profile',
     philosophy_label: 'Core Philosophy',
-    philosophy_quote: '“Pursue excellence, and success will follow.”',
+    philosophy_quote: '“Pursue excellence, and success will naturally follow.”',
     badge: 'About Me',
-    title: "A Practitioner of the Ultimate Process",
-    intro: "I graduated from the <span class=\"text-seal font-semibold\">M.S. program in Computer Science</span> at NTUST.<br /><br />Since childhood, my life has been an endless cross-disciplinary exploration: from being on varsity teams for tennis, table tennis, badminton, and swimming; to attending art, math, and Go gifted classes; to playing piano, xylophone, guitar, and violin. I’ve even summited Jade Mountain and trekked across the Central and Southern Cross-Island Highways.<br /><br />These experiences have shaped my belief: <span class=\"text-seal font-semibold\">valuing the \"process experience\" far more than the result allows me to focus entirely on iterative optimization and self-discipline</span>. To me, <span class=\"text-seal font-semibold\">excellence is simply the inevitable byproduct of focus and discipline</span>. In my experience, the results usually turn out quite well :>",
+    title: '',
+    intro:
+      'I graduated from the <span class="text-seal font-semibold">M.S. program in Computer Science</span> at National Taiwan University of Science and Technology.' +
+      '<br /><br />' +
+      'From childhood to now, my life has been a continuous cross-disciplinary exploration: I joined school teams in tennis, table tennis, badminton, and swimming; attended art classes, math-gifted programs, and Go classes; learned piano, xylophone, guitar, and violin; and hiked Yushan, Hehuanshan, and traversed both the Central and Southern Cross-Island Highways.' +
+      '<br /><br />' +
+      'These experiences led me to firmly believe that <span class="text-seal font-semibold">valuing the process far more than the outcome allows full focus on iterative optimization and self-discipline</span>. To me, <span class="text-seal font-semibold">excellent results are simply the natural consequence of focus and discipline</span>. In my experience, the results usually turn out quite well :>',
     pillars: {
       foundation: {
-        title: "Academic",
-        desc: "Research at NTUST focused on <span class=\"text-seal\">DL Performance Prediction</span> and data complexity. Predicting model performance prior to training with an error margin within <span class=\"text-seal\">10%</span>."
+        title: 'Academic Focus',
+        desc:
+          'Focused on <span class="text-seal">deep learning performance prediction</span> and data complexity analysis, enabling performance estimation before training with an error margin within <span class="text-seal">10%</span>.'
       },
       discipline: {
-        title: "Experience",
-        desc: "Covers CMS/ERP, Zero Trust RBAC, K8s implementation, NLP for stock sentiment, and AI-based traffic accident liability analysis."
+        title: 'Practical Experience',
+        desc:
+          'Experience spans CMS/ERP systems, Zero Trust RBAC, Kubernetes adoption, NLP-based stock sentiment analysis, and AI systems for traffic accident liability analysis.'
       },
       impact: {
-        title: "Tennis Life",
-        desc: "In elementary school, I found a tennis racket in a garbage truck and begged my mom to let me join the team. That's how I became a student-athlete and joined the Taipei representative team. Now, it remains my sanctuary <3"
+        title: 'About Tennis',
+        desc:
+          'In elementary school, I picked up a tennis racket from a garbage truck and dragged my mom to help me join a tennis team. That’s how I became a student-athlete, joined the Taipei representative team, and eventually found a lifelong refuge in tennis <3'
       },
       vision: {
-        title: "Balance",
-        desc: "It is because of the hard work on weekdays that the weekends feel so rewarding ฅ^•ﻌ•^ฅ"
+        title: 'The Beauty of Balance',
+        desc: 'Because of weekdays, weekends become joyful ฅ^•ﻌ•^ฅ'
       }
     },
-    action: 'View Work',
+    action: 'View Projects',
     archives: 'Selected Archives',
-    status: 'Open for Collaboration — 2025'
+    status: 'Open for Collaboration — 2024'
   },
   skills: {
     title: 'Skill Tree',
@@ -191,82 +206,150 @@ const en = {
     categories: {
       ml: 'Machine Learning',
       frontend: 'Frontend',
-      backend: 'Backend & Arch'
+      backend: 'Backend & Architecture'
     }
   },
   projects: {
     index: '03 — Selected Works',
-    title: 'Craft & <span class="italic text-sub">Experience.</span>',
-    sub: 'Bridging rigorous engineering and human-centric design through detailed case studies.',
+    title: '<span class="italic text-sub">Project</span> Collection',
+    sub: 'Building bridges between rigorous engineering and human-centered design through concrete case studies.',
     categories: {
       all: 'All',
-      web: 'Web App',
+      web: 'Web Applications',
       ai: 'AI',
     },
-    loading: 'Retrieving files...',
+    loading: 'Retrieving archives...',
     case_study_label: 'Case Study',
-    tech_stack: 'Tech Stack',
+    tech_stack: 'Keywords',
     role_label: 'Role',
-    role_value: 'Tech Lead / UX Design',
-    end_archive: 'End of Archive',
-    close: 'Close'
+    role_value: 'Technical Lead / UX Design',
+    end_archive: 'End of Project Archive',
+    close: 'Close Case'
   },
   blog: {
-    title: 'Dev Log',
-    sub: '/ Shared Wisdom',
+    title: 'Notes',
+    sub: '/ Blue-collar Wisdom',
     index: '03 — Notes',
     categories: {
       all: 'All',
       frontend: 'Frontend',
       backend: 'Backend',
-      ml: 'ML',
+      ml: 'Machine Learning',
       security: 'Security'
     },
-    loading: 'Retrieving manuscripts...',
+    loading: 'Retrieving drafts...',
     reading_mode: 'Reading Mode',
-    end: 'End of Transmission',
-    back: 'Back to Log',
-    read_article: 'Read More',
+    end: 'Transmission Complete',
+    back: 'Back to Journal',
+    read_article: 'Read Full Article',
   },
   experience: {
     index: '04 — Timeline',
     title: 'Career <br/> Journey.',
-    sub: 'A continuous process of refinement, from foundational research to architectural leadership.',
+    sub: 'Originally clumsy and chaotic along the way',
     items: [
-      { role: "Full Stack Engineer", company: "Freelance Studio", period: "2021 – Present", desc: ["Expertise in TypeScript, React, and Go ecosystems.", "Delivering ESG platforms, CMS backends, and brand sites for listed companies.", "For me, coding is a form of meditation."] },
-      { role: "Co-Founder & CTO", company: "Homie Studio", period: "2019 – 2021", desc: ["Mobile development with Swift and Java.", "Led the development of multiple award-winning products.", "Legendary record of debugging for 56 hours straight."] },
-      { role: "R&D Engineer", company: "Supreme Electronics", period: "2016 – 2018", desc: ["Built enterprise infrastructure using C#, .NET, and MySQL.", "Developed and maintained internal MIS and ERP systems.", "Mastered the art of refilling my water bottle every 30 minutes."] },
-      { role: "B.S. & M.S.", company: "NTUST", period: "2017 – 2025", desc: ["Focused on C++, Python, and Deep Learning applications.", "Led industry-academic projects and published international security papers.", "Briefly dropped out of UCLA as a freshman due to visa issues (a wild plot twist)."] }
+      {
+        role: 'Full Stack Engineer',
+        company: 'Independent Studio',
+        period: '2021 – Present',
+        desc: [
+          'Proficient in the TypeScript / React / Go ecosystem.',
+          'Developed ESG platforms, CMS backends, and brand websites for publicly listed companies.',
+          'For me, writing code is a form of meditation.'
+        ]
+      },
+      {
+        role: 'Co-founder & CTO',
+        company: 'Homie Studio',
+        period: '2019 – 2021',
+        desc: [
+          'Responsible for Swift and Java mobile application development.',
+          'Developed multiple award-winning products across finance and home services.',
+          'Once maintained a record of debugging continuously for 56 hours.'
+        ]
+      },
+      {
+        role: 'R&D Engineer',
+        company: 'Supreme Electronics',
+        period: '2016 – 2018',
+        desc: [
+          'Built enterprise infrastructure using C# / .NET / MySQL.',
+          'Developed and maintained internal MIS and ERP systems.',
+          'Mastered the art of refilling water every 30 minutes.'
+        ]
+      },
+      {
+        role: 'Bachelor / Master',
+        company: 'National Taiwan University of Science and Technology',
+        period: '2017 – 2025',
+        desc: [
+          'Focused on C++ / Python and deep learning applications.',
+          'Led multiple industry-academic collaborations and international security paper publications.',
+          'Removed all spaces in C code just to run faster on OJ.'
+        ]
+      }
     ]
   },
   awards: {
-    title: 'Honors & Recognition',
+    title: 'Honors & Awards',
     items: [
-      { year: "2020", title: "Gold Award (Champion)", organization: "Hua Nan FinTech Competition", description: "1st place in the API Integration Track. Led financial architecture design and production-grade API implementation." },
-      { year: "2020", title: "1st Place (Champion)", organization: "LINE Chatbot Design Competition", description: "Developed 'Shooly', an innovative chatbot for booking plumbing and electrical services." },
-      { year: "2019-2020", title: "Entrepreneurship Series", organization: "MoEA / MoST / MoE", description: "Finalist in 'Startup Hometown', Top 40 in FITI program, and MoE U-Start Grant recipient." },
-      { year: "2019", title: "Runner-up (2nd Place)", organization: "CTSP Smart Innovation Competition", description: "Developed an AI-driven virtual exhibition hall for immersive online touring experiences." },
-      { year: "2019-2021", title: "Athletic Excellence", organization: "National Intercollegiate Games", description: "12 years as a competitive athlete. Taipei City Champion, 3rd in National Intercollegiate Games (Team), and NTUST Tennis Captain." },
-      { year: "2019-2021", title: "Incubation & Research", organization: "III / NTUST / STSP / CTSP", description: "Selected for III Digital Sandbox Research Project and incubated across multiple National Science Parks." }
-    ]
-  },
-  academic: {
-    title: 'Research Foundation',
-    items: [
-      { title: "Master's Thesis: CNN Perf. Prediction", desc: "A framework to estimate CNN accuracy based on data complexity without full training." },
-      { title: "Log Anomaly Detection (KIOXIA)", desc: "Deep learning models to detect system log anomalies for Zero Trust implementation." },
-      { title: "Container Infra Analysis (TDCC)", desc: "Performance trade-off analysis of K8s, VM, and Bare Metal for high-load financial systems." },
-      { title: "Accident Liability Prediction (HGIGA)", desc: "NLP-based system to assist legal liability determination from accident reports." }
+      {
+        year: '2020',
+        title: 'Gold Award (Champion)',
+        organization: 'Hua Nan Financial Holdings FinTech Competition',
+        description:
+          'National first place in the API Proof-of-Concept track. Led financial service architecture design and production-grade API implementation.'
+      },
+      {
+        year: '2020',
+        title: 'First Place (Champion)',
+        organization: 'LINE Chatbot Design Competition',
+        description:
+          'Developed “Shooly,” an innovative chatbot for plumbing and electrical service booking.'
+      },
+      {
+        year: '2019–2020',
+        title: 'Serial Startup Competition Winner',
+        organization: 'Ministry of Economic Affairs / Ministry of Science and Technology / Ministry of Education',
+        description:
+          'Selected as a finalist in “Startup in Hometown,” Top 40 in the FITI program, and recipient of the Ministry of Education U-Start grant, focusing on commercializing innovative technology.'
+      },
+      {
+        year: '2019',
+        title: 'Second Place',
+        organization: 'Central Taiwan Science Park Smart Innovation Competition',
+        description:
+          'Developed an online intelligent exhibition platform enabling immersive web-based exploration.'
+      },
+      {
+        year: '2003–Present',
+        title: 'Tennis Achievements',
+        organization: 'National Intercollegiate Games / NTUST Jing-Cheng Cup',
+        description:
+          'Twelve years as a student-athlete. Achievements include Taipei City Champion, third place in national collegiate team competition, Jing-Cheng Cup men’s singles champion, and NTUST tennis team captain.'
+      },
+      {
+        year: '2019–2021',
+        title: 'Incubation & Research Programs',
+        organization: 'III / NTUST / Hsinchu Science Park / Central Taiwan Science Park',
+        description:
+          'Selected for the III Digital Sandbox Research Program and incubated by multiple science park incubation centers.'
+      }
     ]
   },
   contact: {
-    title: 'Let\'s <span class="italic text-sub">Talk.</span>',
-    desc: 'I am currently open to new opportunities. Whether it\'s a research inquiry, a project proposal, or just a chat about which tennis racket feels the best, feel free to reach out.',
-    copy: 'Copy Email',
+    title: 'Contact',
+    desc: 'Thank you for visiting. For collaboration opportunities or any feedback, feel free to reach out via email.',
+    email_label: 'Email',
+    social_label: 'Social Links',
+    copy: 'Copy',
     copied: 'Copied',
-    locations: ['Taipei', 'LinkedIn', 'GitHub']
+    links: [
+      { label: 'GitHub', url: 'https://github.com/YenChiaChen' },
+    ]
   }
 };
+
 
 export const translations = {
   'zh-TW': zhTW,

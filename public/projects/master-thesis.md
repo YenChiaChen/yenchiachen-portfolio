@@ -7,7 +7,6 @@ type: MLOps
 achievement: 碩士論文
 tags: [	Performance Prediction, Data Complexity, Deep Learning, MLOps, Explainable AI]
 description: 基於資料特性分析的深度模型效能預測。
-imageUrl: xxx
 ---
 
 ## 1. 研究動機 (Motivation)
@@ -43,7 +42,7 @@ imageUrl: xxx
 
 為什麼第一階段使用線性模型？請看這張圖。
 
-
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146845/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.01.45_t51nva.webp)
 
 我們收集了 7 種不同影像辨識資料集，每種資料集使用約 2000 組不同參數訓練。結果顯示，約 50% 的模型效能其實都落在圖中的一條弧線上。這條弧線就是我們定義的 **Baseline Accuracy**。這意味著，只要我們能找到足夠好的資料複雜度指標 (DCMs) 作為輸入，線性模型就足以預測出這 50% 的基礎準確率區間。
 
@@ -54,6 +53,8 @@ imageUrl: xxx
 2.  模型參數 (Model Parameters)
 3.  第一階段輸出的 Baseline Accuracy
 
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146846/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.01.49_xrxx2z.webp)
+
 這裡必須再次放入「資料複雜度」的原因在於：**模型參數對效能的影響，高度取決於資料的難度**。例如，深層模型在複雜圖片上表現較好，但在簡單任務上卻容易 Overfitting。我們需要非線性的 XGBoost 來學習這種交互關係，判斷模型設定會讓準確率往上或往下偏移多少。
 
 
@@ -61,7 +62,7 @@ imageUrl: xxx
 
 為了讓模型能準確學習，我們選用了五個面向的 DCMs：
 
-
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146846/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.02.11_veg2yd.webp)
 
 1.  **Neighborhood-based**：觀察樣本與鄰居的關係。
     * 例如 `NN Distance Ratio` 計算同類與異類距離差異；`NN Non-linearity` 則測試線性內插新樣本是否會導致錯誤分類。
@@ -87,15 +88,18 @@ imageUrl: xxx
 
 首先，我們觀察模型深度與準確率的關係。
 
-
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146845/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.02.47_g3mwik.webp)
 
 從圖中可以看到，無論模型深淺（左至右），最佳表現差異不大。模型架構與最終準確率最大的關聯反映在「標準差」上。這證實了**資料集難度才是主導因素**，不存在 "One-size-fits-all" 的模型，這與我們的框架設計理念相符。
 
 接著我們對特徵進行主成分分析 (PCA)：
 
-
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146846/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.02.58_vebpfe.webp)
 
 * **PC1 (第一主成分)**：主要由 `NN Classifier` 相關特徵組成，描述**非線性特徵**與類別邊界的複雜度。數值越高，幾何結構越複雜。
+
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146845/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.03.03_eeitpm.webp)
+
 * **PC2 (第二主成分)**：由 `Error Rate of Linear Classifier` 和 `Variance Mean` 組成，描述**線性可分性**與特徵分佈寬度。
 
 有趣的發現是：**PC2 對應我們的 Stage 1 (Baseline 線性預測)，而 PC1 對應 Stage 2 (Offset 非線性預測)**。這從側面證明了我們兩階段拆解是合理的。
@@ -107,7 +111,13 @@ imageUrl: xxx
 
 
 * **Baseline 預測**：僅使用資料複雜度，我們就能精準預測出 Baseline 區間（圖中長條狀分佈），即使是極端值也能抓到。
+
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146845/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.03.27_tbjdt7.webp)
+
 * **最終預測**：加入 Stage 2 的偏移量後，無論是在分佈內 (In-Distribution) 或分佈外 (Out-of-Distribution/LODO) 的測試，MSE (均方誤差) 都極低（LODO MSE < 0.012）。
+
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146847/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.03.58_ckxlrk.webp)
+
 * **跨領域測試 (LODM)**：即使跨越不同 Domain，MSE 也能維持在 0.008 以下，驗證了框架的泛化能力。
 
 ### 3.3 單階段 vs. 雙階段比較
@@ -120,9 +130,11 @@ imageUrl: xxx
 
 我們發現 `Variance Mean` 是與模型架構最相關的特徵。
 
-
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146847/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.04.40_e2c9p9.webp)
 
 * **模型選擇指引**：`Variance Mean` 與 Offset 的 PCA Loading 高達 -0.8。這意味著當 `Variance Mean` 較低時（特徵變異小），模型參數設定必須更精確，通常需要較深的模型架構。
+
+![image](https://res.cloudinary.com/dcpzacz9d/image/upload/v1767146846/%E6%88%AA%E5%9C%96_2025-12-31_%E4%B8%8A%E5%8D%8810.04.56_zls5nn.webp)
 
 * **誤差診斷**：我們分析了預測誤差 (MSE) 與輸入主成分的關係，發現 **PC6** 扮演關鍵角色。PC6 反映了 `Class Entropy` 和 `Variance Mean`。
     * PC6 與 MSE 呈現雙尾 (Double-tailed) 關係。
