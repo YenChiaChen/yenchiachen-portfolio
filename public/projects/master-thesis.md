@@ -2,7 +2,7 @@
 ---
 title: Data Complexity-aware Deep Model Performance
 Forecasting
-category: AI
+category: Thesis & Paper
 type: MLOps
 achievement: 碩士論文
 tags: [	Performance Prediction, Data Complexity, Deep Learning, MLOps, Explainable AI]

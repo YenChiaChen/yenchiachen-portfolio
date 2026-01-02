@@ -44,7 +44,7 @@ export const ProjectsSection: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   // Derive unique categories
-  const categoryKeys = useMemo(() => ['all', 'web', 'ai'], []);
+  const categoryKeys = useMemo(() => ['all', 'web', 'paper','security', 'nlp'], []);
 
   // 1. Filter Projects
   const filteredProjects = useMemo(() => {
@@ -53,7 +53,9 @@ export const ProjectsSection: React.FC = () => {
     // Mapping internal category keys to display strings found in markdown frontmatter
     const catMap: Record<string, string> = {
         'web': 'Web App',
-        'ai': 'AI',
+        'paper': 'Paper',
+        'security': 'Security',
+        'nlp' : 'NLP',
     };
     
     // Check against mapped value or direct value (case-insensitive for robustness)

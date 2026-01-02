@@ -1,4 +1,3 @@
-
 {
   "name": "yenchiachen-portfolio",
   "private": false,
@@ -10,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "katex": "^0.16.27",
     "lucide-react": "^0.344.0",
     "marked": "^12.0.0",
+    "marked-katex-extension": "^5.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet-async": "^2.0.4"

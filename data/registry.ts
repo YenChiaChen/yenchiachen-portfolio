@@ -1,7 +1,9 @@
 
 export const projectSlugs = [
   'master-thesis',
-  'addressing-imbalance-in-UNSW'
+  'addressing-imbalance-in-UNSW',
+  'neural-extractive-text-summarization-with-syntactic-compression',
+  'flight-route-network-analysis-via-link-prediction-and-optimization'
 ];
 
 export const blogSlugs = [

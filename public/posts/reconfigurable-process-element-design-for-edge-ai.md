@@ -11,7 +11,7 @@ description: 探討 Edge AI 加速器設計、Bit Fusion 與 Hierarchical PE 架
 
 ## 1. 機器學習的三種視角與分類
 
-陳老師首先以三個場景（向同學、學弟妹、非本科系解釋）來定義機器學習，並將其技術大致分為三類：
+陳老師首先以三個場景來定義機器學習，並將其技術大致分為三類：
 
 * **Supervised Learning (監督式學習)**
 * **Unsupervised Learning (非監督式學習)**

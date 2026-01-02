@@ -1,6 +1,8 @@
-
 import React, { useMemo } from 'react';
 import { marked } from 'marked';
+import markedKatex from 'marked-katex-extension';
+// 重要：務必引入 KaTeX 的 CSS，否則公式會顯示錯亂
+import 'katex/dist/katex.min.css'; 
 
 interface MarkdownRendererProps {
   content: string;
@@ -9,7 +11,7 @@ interface MarkdownRendererProps {
 // Define the custom extension for [cite]Text[/cite] syntax
 const citeExtension = {
   name: 'cite',
-  level: 'inline' as const, // Scan inside inline text
+  level: 'inline' as const,
   start(src: string) { return src.match(/\[cite\]/)?.index; },
   tokenizer(src: string) {
     const rule = /^\[cite\](.*?)\[\/cite\]/;
@@ -23,9 +25,14 @@ const citeExtension = {
     }
   },
   renderer(token: any) {
-    // Renders a styled citation: Block display, Right aligned, Serif font, Subtle color
     return `<cite class="block text-right font-serif text-xs text-sub mt-2 tracking-widest not-italic opacity-80">— ${token.text}</cite>`;
   }
+};
+
+// 1. 設定 KaTeX 選項 (可選)
+const katexOptions = {
+  throwOnError: false, // 當公式語法錯誤時不拋出異常，而是顯示原始碼
+  output: 'html' as const,      // 輸出為 html (適合在瀏覽器渲染)
 };
 
 // Configure marked globally
@@ -34,7 +41,8 @@ marked.setOptions({
   breaks: true,
 });
 
-// Register the extension
+// 2. 註冊擴充功能 (建議將 KaTeX 放在自定義擴充之前或之後皆可，通常並行不衝突)
+marked.use(markedKatex(katexOptions));
 marked.use({ extensions: [citeExtension] });
 
 export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
@@ -43,6 +51,8 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) =
 
   return (
     <div 
+      // 注意：Tailwind 的 prose 有時會覆蓋 KaTeX 的字體樣式
+      // 你可能需要在 global.css 或這裡微調 .katex 相關的樣式，但通常預設效果已足夠
       className="prose prose-ink prose-lg max-w-none 
                  prose-headings:font-serif prose-headings:font-normal prose-headings:text-ink
                  prose-p:font-sans prose-p:font-light prose-p:leading-relaxed prose-p:text-sub
