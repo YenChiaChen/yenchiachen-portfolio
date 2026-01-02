@@ -4,7 +4,7 @@ category: EDGE
 type: Course Note
 achievement: 課程筆記
 tags: [Edge AI, AI Accelerator, Reconfigurable PE, Quantization, CNN]
-description: 探討 Edge AI 加速器設計、Bit Fusion 與 Hierarchical PE 架構，以及 Depthwise Separable Convolutions 原理。
+excerpt: 探討 Edge AI 加速器設計、Bit Fusion 與 Hierarchical PE 架構，以及 Depthwise Separable Convolutions 原理。
 ---
 
 # Edge AI 的可重構處理單元設計：概念與架構

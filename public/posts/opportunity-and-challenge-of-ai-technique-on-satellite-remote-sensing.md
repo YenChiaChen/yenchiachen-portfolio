@@ -4,7 +4,7 @@ category: ML
 type: Seminar Note
 achievement: 課程筆記
 tags: [Satellite, Precipitation, DGMR, Remote Sensing]
-description: 探討機器學習如何提升衛星感測的準確度，特別是在降雨預測與防災上的應用。
+excerpt: 探討機器學習如何提升衛星感測的準確度，特別是在降雨預測與防災上的應用。
 ---
 
 # AI 技術在衛星遙測上的機會與挑戰

@@ -7,6 +7,7 @@ type: MLOps
 achievement: 碩士論文
 tags: [	Performance Prediction, Data Complexity, Deep Learning, MLOps, Explainable AI]
 description: 基於資料特性分析的深度模型效能預測。
+imageUrl: https://res.cloudinary.com/dcpzacz9d/image/upload/v1767320245/IMG_7797_cidqs3.webp
 ---
 
 ## 1. 研究動機 (Motivation)

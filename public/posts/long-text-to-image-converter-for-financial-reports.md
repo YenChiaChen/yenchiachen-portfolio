@@ -4,7 +4,7 @@ category: ML
 type: Generative Model
 achievement: 課程筆記
 tags: [金融視覺, FinTech, 量化交易]
-description: 探討金融視覺的概念、資工系在 FinTech 的優勢，以及蔡老師針對股票圖形辨識的研究。
+excerpt: 探討金融視覺的概念、資工系在 FinTech 的優勢，以及蔡老師針對股票圖形辨識的研究。
 ---
 
 

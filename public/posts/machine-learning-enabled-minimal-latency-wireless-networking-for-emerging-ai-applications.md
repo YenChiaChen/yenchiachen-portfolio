@@ -4,7 +4,7 @@ category: INFRA
 type: Course Notes
 achievement: 課程筆記
 tags: [Networked AI, Wireless Networking, Multi-Agent Systems, Edge AI, Cyber-Physical Systems]
-description: 課程筆記整理，介紹 Cyber–Physical Systems 中感測器的角色、Networked AI 與多智能體系統（MRS），以及 AI 計算與無線網路在低延遲應用上的挑戰。
+excerpt: 課程筆記整理，介紹 Cyber–Physical Systems 中感測器的角色、Networked AI 與多智能體系統（MRS），以及 AI 計算與無線網路在低延遲應用上的挑戰。
 ---
 
 # Cyber World and Physical World

@@ -2,7 +2,7 @@
 
 ---
 title: Addressing Imbalance in UNSW-NB15 Dataset
-category: Security
+category: AI
 type: Generative Model
 achievement: 資安
 tags: [Cybersecurity, Imbalanced Data, UNSW-NB15, GAN, ctGAN, SMOTE]

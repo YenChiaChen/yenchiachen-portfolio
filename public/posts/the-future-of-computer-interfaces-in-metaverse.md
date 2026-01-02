@@ -4,7 +4,7 @@ category: HAI
 type: Course Notes
 achievement: 課程筆記
 tags: [Human-Computer Interaction, Metaverse, Wearable Devices, Sensors, Machine Learning]
-description: 課程筆記整理，探討人機介面的演進、超聲波感測與穿戴式感測器，並分析其在 Metaverse 與自然互動介面中的應用潛力。
+excerpt: 課程筆記整理，探討人機介面的演進、超聲波感測與穿戴式感測器，並分析其在 Metaverse 與自然互動介面中的應用潛力。
 ---
 
 # Human–Computer Interface（人機介面）

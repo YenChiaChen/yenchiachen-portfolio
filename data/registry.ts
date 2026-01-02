@@ -1,9 +1,13 @@
 
 export const projectSlugs = [
   'master-thesis',
+  'ppbank',
+  'shooly',
+  'lili',
   'addressing-imbalance-in-UNSW',
   'neural-extractive-text-summarization-with-syntactic-compression',
-  'flight-route-network-analysis-via-link-prediction-and-optimization'
+  'flight-route-network-analysis-via-link-prediction-and-optimization',
+  'vision-transformer-image-recognition-with-pure-attention'
 ];
 
 export const blogSlugs = [

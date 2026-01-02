@@ -4,7 +4,7 @@ category: EDGE
 type: Course Notes
 achievement: 課程筆記
 tags: [AI Accelerator, Winograd Algorithm, Edge AI, CNN Optimization, Hardware-Algorithm Co-design]
-description: 課程筆記整理，介紹 Winograd 演算法如何應用於 Edge AI Accelerator 設計，以降低 CNN 卷積運算的計算成本，並分析其在不同設定下的效能與限制。
+excerpt: 課程筆記整理，介紹 Winograd 演算法如何應用於 Edge AI Accelerator 設計，以降低 CNN 卷積運算的計算成本，並分析其在不同設定下的效能與限制。
 ---
 
 # 課程背景與主題概述

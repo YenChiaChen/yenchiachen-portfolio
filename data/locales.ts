@@ -66,7 +66,7 @@ const zhTW = {
     categories: {
       all: '全部',
       web: 'Web 應用',
-      ai: 'AI',
+      ai: 'AI應用',
       nlp:'自然語言處理',
       security:'資訊安全',
       paper: '論文',
@@ -222,7 +222,7 @@ const en = {
     categories: {
       all: 'All',
       web: 'Web Applications',
-      ai: 'AI',
+      ai: 'AI Applications',
       security: 'Cyber Security',
       paper: 'Thesis',
       nlp:'NLP',

@@ -44,7 +44,7 @@ export const ProjectsSection: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   // Derive unique categories
-  const categoryKeys = useMemo(() => ['all', 'web', 'paper','security', 'nlp'], []);
+  const categoryKeys = useMemo(() => ['all', 'web', 'paper','ai'], []);
 
   // 1. Filter Projects
   const filteredProjects = useMemo(() => {
@@ -54,8 +54,7 @@ export const ProjectsSection: React.FC = () => {
     const catMap: Record<string, string> = {
         'web': 'Web App',
         'paper': 'Paper',
-        'security': 'Security',
-        'nlp' : 'NLP',
+        'ai': 'AI',
     };
     
     // Check against mapped value or direct value (case-insensitive for robustness)
@@ -326,7 +325,7 @@ const ProjectCard: React.FC<{ project: Project; index: number; className?: strin
                 src={imageUrl} 
                 alt={project.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-seal mix-blend-multiply transform origin-left scale-x-0 group-hover:animate-ink-spread opacity-0"></div>
         </div>

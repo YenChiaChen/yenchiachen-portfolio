@@ -1,7 +1,8 @@
 ---
 title: Neural Extractive Text Summarization with Syntactic Compression
-category: NLP
+category: AI
 type: Research Project
+achievement: NLP
 role: Model Design & Experiment
 tags: [Text Summarization, NLP, Information Retrieval, Syntactic Parsing, Neural Networks]
 ---

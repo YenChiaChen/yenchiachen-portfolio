@@ -1,6 +1,7 @@
 ---
 title: Flight Route Network Analysis via Link Prediction and Optimization
-category: Network Science
+category: AI
+achievement: Social Networks
 type: Research Project
 role: Graph Modeling, Optimization, Data Analysis
 tags: [Social Network Analysis, Graph Theory, Link Prediction, Transportation Networks, Convex Optimization]

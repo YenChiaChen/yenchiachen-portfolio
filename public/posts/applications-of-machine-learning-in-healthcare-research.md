@@ -4,7 +4,7 @@ category: ML
 type: Data Science
 achievement: 課程筆記
 tags: [Healthcare AI, Bio-informatics, Public Health, Machine Learning]
-description: 探討機器學習在生物醫療領域的三個層級應用：分子、病患與公共衛生，並深入分析登革熱預測模型。
+excerpt: 探討機器學習在生物醫療領域的三個層級應用：分子、病患與公共衛生，並深入分析登革熱預測模型。
 ---
 
 # 機器學習於生物醫療研究的應用：從分子到公共衛生

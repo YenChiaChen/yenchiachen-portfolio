@@ -29,6 +29,50 @@ const citeExtension = {
   }
 };
 
+
+const youtubeExtension = {
+  name: 'youtube',
+  level: 'block' as const, // Treat as a block element
+  start(src: string) { return src.match(/{%\s*youtube/)?.index; },
+  tokenizer(src: string) {
+    // Regex to match {%youtube videoId %} or {% youtube https://... %}
+    // Captures the content inside the tag
+    const rule = /^{%\s*youtube\s+([^\s}]+)\s*%}/;
+    const match = rule.exec(src);
+    
+    if (match) {
+      let videoId = match[1].trim();
+
+      // Attempt to extract ID if it's a full URL
+      // Supports: youtube.com/watch?v=ID, youtu.be/ID, etc.
+      const urlMatch = videoId.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
+      if (urlMatch) {
+        videoId = urlMatch[1];
+      }
+
+      return {
+        type: 'youtube',
+        raw: match[0],
+        videoId: videoId,
+      };
+    }
+  },
+  renderer(token: any) {
+    return `
+      <div class="w-full aspect-video my-12 rounded-sm overflow-hidden shadow-xl relative bg-black/5">
+        <iframe 
+          src="https://www.youtube.com/embed/${token.videoId}" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          class="absolute inset-0 w-full h-full"
+        ></iframe>
+      </div>
+    `;
+  }
+};
+
 // 1. 設定 KaTeX 選項 (可選)
 const katexOptions = {
   throwOnError: false, // 當公式語法錯誤時不拋出異常，而是顯示原始碼
@@ -43,7 +87,7 @@ marked.setOptions({
 
 // 2. 註冊擴充功能 (建議將 KaTeX 放在自定義擴充之前或之後皆可，通常並行不衝突)
 marked.use(markedKatex(katexOptions));
-marked.use({ extensions: [citeExtension] });
+marked.use({ extensions: [citeExtension, youtubeExtension] });
 
 export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
   // Memoize parsing to prevent unnecessary computations on re-renders
