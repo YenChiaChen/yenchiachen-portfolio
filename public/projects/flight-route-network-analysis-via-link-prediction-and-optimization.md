@@ -108,12 +108,12 @@ This formulation yields an interpretable **importance weighting over structural 
 
 | Metric | Weight |
 |------|--------|
-| \( c_1 \) | -0.001 |
-| \( c_2 \) | -0.002 |
-| \( c_3 \) | -0.133 |
-| \( c_4 \) | **1.161** |
-| \( c_5 \) | 0.005 |
-| \( c_6 \) | -0.029 |
+| $ c_1 $ | -0.001 |
+| $ c_2 $ | -0.002 |
+| $ c_3 $ | -0.133 |
+| $ c_4 $ | **1.161** |
+| $ c_5 $ | 0.005 |
+| $ c_6 $ | -0.029 |
 
 **Top-5 recommended airlines:**
 
@@ -133,12 +133,12 @@ This formulation yields an interpretable **importance weighting over structural 
 
 | Metric | Weight |
 |------|--------|
-| \( c_1 \) | 0.001 |
-| \( c_2 \) | -0.003 |
-| \( c_3 \) | 0.148 |
-| \( c_4 \) | **0.842** |
-| \( c_5 \) | -0.005 |
-| \( c_6 \) | 0.018 |
+| $ c_1 $ | 0.001 |
+| $ c_2 $ | -0.003 |
+| $ c_3 $ | 0.148 |
+| $ c_4 $ | **0.842** |
+| $ c_5 $ | -0.005 |
+| $ c_6 $ | 0.018 |
 
 **Top-5 recommended airlines:**
 
@@ -158,12 +158,12 @@ This formulation yields an interpretable **importance weighting over structural 
 
 | Metric | Weight |
 |------|--------|
-| \( c_1 \) | 0.000 |
-| \( c_2 \) | 0.000 |
-| \( c_3 \) | **1.000** |
-| \( c_4 \) | 0.000 |
-| \( c_5 \) | 0.000 |
-| \( c_6 \) | 0.000 |
+| $ c_1 $ | 0.000 |
+| $ c_2 $ | 0.000 |
+| $ c_3 $ | **1.000** |
+| $ c_4 $ | 0.000 |
+| $ c_5 $ | 0.000 |
+| $ c_6 $ | 0.000 |
 
 **Top-5 recommended airlines:**
 
