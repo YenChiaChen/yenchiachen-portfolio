@@ -1,8 +1,13 @@
 
 export const projectSlugs = [
   'master-thesis',
+  'constructing-an-enterprise-grade-cloud-native-headless-cms',
+  'adaptive-zero-trust-architecture-via-deep-learning-log-analysis',
+  'kubernetes-migration-strategy-and-hpa-latency-analysis',
   'ppbank',
   'shooly',
+  'semantic-reasoning-for-traffic-liability-determination-from-unstructured-text-to-automated-legal-attribution',
+  'financial-sentiment-quantification-platform-via-heterogeneous-text-mining',
   'lili',
   'addressing-imbalance-in-UNSW',
   'neural-extractive-text-summarization-with-syntactic-compression',

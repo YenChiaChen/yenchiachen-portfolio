@@ -17,6 +17,8 @@ imageUrl: https://res.cloudinary.com/dcpzacz9d/image/upload/v1767321723/%E6%88%A
 
 「粒粒珍食快取平台」正是在此背景下誕生，嘗試以 **平台化、數位化、低摩擦的方式**，重新分配本應被浪費的食物資源。
 
+{%youtube https://youtu.be/hXPaHPHjd-U %}
+
 ---
 
 ## 問題定義與系統性拆解
