@@ -17,7 +17,7 @@ export const SEO: React.FC = () => {
   const keywords = "Yen-Chia Chen, Machine Learning, Frontend Engineer, Portfolio, Minimalist, React, TypeScript, AI, Web Development";
   // Updated URL to custom domain
   const url = typeof window !== 'undefined' ? window.location.href : 'https://yenchia.tw/';
-  const image = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2560&auto=format&fit=crop";
+  const image = "https://res.cloudinary.com/dcpzacz9d/image/upload/c_crop,w_1050,h_1300/v1766891265/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E4%BD%9C%E5%93%81-1_2_uqfdws.webp";
 
   return (
     <Helmet>
