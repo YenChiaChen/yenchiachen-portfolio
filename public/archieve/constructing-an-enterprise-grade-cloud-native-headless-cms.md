@@ -122,7 +122,6 @@ description: 自主研發之企業級 Headless CMS，以 Golang 與 TypeScript �
 ## 企業級治理與權限模型（Governance & RBAC）
 事件溯源版本控制（Event Sourcing）
 
-📌 （> 圖片代補 ：版本時間軸示意圖）
 
 所有內容變更皆以 **事件（Event）** 形式記錄，而非直接覆寫資料：
 
@@ -137,7 +136,7 @@ description: 自主研發之企業級 Headless CMS，以 Golang 與 TypeScript �
 
 ## DevOps 與內容即代碼（Content as Code）
 
-📌 （> 圖片代補 ：CI/CD Pipeline 圖）
+
 
 系統深度整合 CI/CD，將「內容發布」視為一條可被自動化的工程流程：
 
