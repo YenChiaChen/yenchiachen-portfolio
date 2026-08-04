@@ -2,7 +2,7 @@
   {
     "id": "20250601-master-thesis",
     "date": "2025-06-01",
-    "title": "Data Complexity-aware Deep Model Performance Forecasting",
+    "title": "不用真的訓練，也能先算出模型會考幾分",
     "tags": [
       "作品",
       "Performance Prediction",
@@ -12,14 +12,14 @@
       "Explainable AI"
     ],
     "status": "done",
-    "excerpt": "1. 研究動機 (Motivation) 這項研究的起點，來自於 MLOps 領域中一個核心的痛點。 目前在開發深度學習模型時，我們往往需要經歷冗長的流程，包含架構設計、超參數調整，以及不斷的試錯 (Trial and Error)。這樣的",
+    "excerpt": "螢幕上的進度條跑滿六個小時，準確率停在五成出頭。這不是答案，是重新設計架構、重新調超參數、再等一輪的入場券。 這是 MLOps 領域裡最磨人的一段路：架構設計、超參數調整、不斷試錯，每一步都得真的跑一次訓練才知道結果，耗時又燒資源。如果能在",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767320245/IMG_7797_cidqs3.webp",
     "replyCount": 0
   },
   {
     "id": "20240601-semantic-reasoning-for-traffic-liability-determination-from-unstructured-text-to-automated-legal-attribution",
     "date": "2024-06-01",
-    "title": "Semantic Reasoning for Traffic Liability Determination: From Unstructured Text to Automated Legal Attribution",
+    "title": "路口的一句筆錄，如何長出一條看得懂的責任判斷",
     "tags": [
       "作品",
       "Edge AI",
@@ -30,14 +30,14 @@
       "Privacy-preserving"
     ],
     "status": "done",
-    "excerpt": "摘要 本研究提出一套 以邊緣運算（Edge Computing）為核心的交通肇事責任語意推論系統 ，旨在改善現行事故處理流程中，對非結構化文字高度依賴人工判讀所帶來的不一致性與時效問題。系統以警務人員撰寫之事故敘述（Accident Nar",
+    "excerpt": "凌晨兩點的路口，兩輛車才剛擦撞，警員蹲在柏油路上，把眼前的煞車痕、碎片位置、雙方說詞，一句一句翻譯成筆錄。這份筆錄接下來會交給鑑定人員，依據法條判斷誰該負多少責任——而這段翻譯過程，幾乎全靠人工判讀。 問題是，同一份筆錄換一個人讀，結論可能",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767488547/Gemini_Generated_Image_ker3srker3srker3_jxixk6.webp",
     "replyCount": 0
   },
   {
     "id": "20240301-adaptive-zero-trust-architecture-via-deep-learning-log-analysis",
     "date": "2024-03-01",
-    "title": "Adaptive Zero Trust Architecture via Deep Learning–Based Log Analysis",
+    "title": "不只驗證你是誰，還要看你正在做什麼——用深度學習，把 Zero Trust 蓋成看得懂行為的系統",
     "tags": [
       "作品",
       "Cybersecurity",
@@ -48,14 +48,14 @@
       "Wazuh"
     ],
     "status": "done",
-    "excerpt": "Abstract 本產學合作專案旨在回應企業實務中， 傳統靜態 RBAC（Role Based Access Control）模型在面對現代資安威脅時所暴露的結構性限制 。在既有模型中，權限一旦被授予，往往僅依賴帳號與角色進行判斷，缺乏對「",
+    "excerpt": "凌晨三點，一個通過身分驗證的合法帳號，打開了一份與他職務毫不相干的檔案。系統沒有跳出任何警告——因為在傳統存取控制的邏輯裡，「帳號通過驗證」就等於「這個人可以被信任」。 真正造成傷害的資安事件，往往不是外部入侵者硬闖進來，而是一個「看起來完",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767486942/13mar2018-deeplog-architecture_i8dx6g.png",
     "replyCount": 0
   },
   {
     "id": "20240115-long-text-to-image-converter-for-financial-reports",
     "date": "2024-01-15",
-    "title": "Long Text to Image Converter for Financial Reports",
+    "title": "金融視覺：當機器學會看盤，資工人找到金融科技的新藍海",
     "tags": [
       "文章",
       "金融視覺",
@@ -63,13 +63,13 @@
       "量化交易"
     ],
     "status": "done",
-    "excerpt": "金融視覺與 FinTech：資工系的新藍海 1. 什麼是金融視覺 (Financial Vision)？ 「金融視覺」的概念是致敬「電腦視覺 (Computer Vision)」發展而來。 電腦視覺 ：研究如何讓機器具備「看」的功能。 金融",
+    "excerpt": "蔡老師在台上打了個比方：資工系工程師像運動員，現在領著令人羨慕的高薪，但體力與反應力終有一天會退場，那時候的價值該怎麼延續？ 這句話點出的不只是職涯焦慮，而是資工人正站在一個新藍海的入口。當多數工程師還在比較大廠的 offer，金融科技這塊",
     "replyCount": 0
   },
   {
     "id": "20231201-kubernetes-migration-strategy-and-hpa-latency-analysis",
     "date": "2023-12-01",
-    "title": "Kubernetes Migration Strategy & HPA Latency Analysis",
+    "title": "搬上 Kubernetes 之後，才發現 HPA 藏著十五秒的擴展延遲",
     "tags": [
       "作品",
       "Kubernetes",
@@ -81,14 +81,14 @@
       "Capacity Planning"
     ],
     "status": "done",
-    "excerpt": "1. 摘要 本計畫聚焦於將既有應用服務遷移至 Kubernetes（K8s）之可行性評估與落地策略。透過 SWOT 分析、壓力測試（Stress Testing）與極限情境演練，我們驗證 Kubernetes 在宣告式治理、自我修復與雲原生",
+    "excerpt": "流量在不到十秒內衝到平常的五倍，新的 Pod 還沒排上隊，舊的 Pod 已經開始逾時。 把服務搬上 Kubernetes，理論上該是穩定度的升級：宣告式治理、自我修復、雲原生生態一應俱全。但這次評估在對水平自動擴展（HPA, Horizon",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767487918/Gemini_Generated_Image_fula6xfula6xfula_hrvl72.webp",
     "replyCount": 0
   },
   {
     "id": "20231001-applications-of-machine-learning-in-healthcare-research",
     "date": "2023-10-01",
-    "title": "Applications of Machine Learning in Healthcare Research",
+    "title": "機器學習怎麼一層層看懂健康：從一顆分子，到一張登革熱地圖",
     "tags": [
       "文章",
       "Healthcare AI",
@@ -97,7 +97,7 @@
       "Machine Learning"
     ],
     "status": "done",
-    "excerpt": "機器學習於生物醫療研究的應用：從分子到公共衛生 1. 生物醫療研究的三大層級 (Three Levels of Healthcare AI) 蘇老師的研究將機器學習在生物醫療的應用，系統性地分為三個層級： (1) 分子層級 (Molecul",
+    "excerpt": "颱風季還沒真正開始，一份模型已經先一步，把台灣最可能爆發登革熱的社區圈了出來。 這不是科幻情節，而是機器學習從分子一路做到公共衛生現場的結果。蘇老師的研究把這條路徑拆成三層：分子、病患、群體，每一層都在回答同一個問題——資料能不能比人更早看",
     "replyCount": 0
   },
   {
@@ -113,13 +113,13 @@
       "CNN"
     ],
     "status": "done",
-    "excerpt": "Edge AI 的可重構處理單元設計：概念與架構 1. 機器學習的三種視角與分類 陳老師首先以三個場景來定義機器學習，並將其技術大致分為三類： Supervised Learning (監督式學習) Unsupervised Learnin",
+    "excerpt": "我做的是資料科學。很長一段時間，我以為「讓模型變快」這件事，就是把演算法寫漂亮一點、把資料降維正規化弄乾淨一點。 直到那堂課，陳老師在白板上畫下一個會「變形」的運算單元——同一塊硬體，能自己伸縮去配合不同精度的運算。那一刻我才發現，加速這件",
     "replyCount": 0
   },
   {
     "id": "20230601-opportunity-and-challenge-of-ai-technique-on-satellite-remote-sensing",
     "date": "2023-06-01",
-    "title": "Opportunity and Challenge of AI Technique on Satellite Remote Sensing",
+    "title": "雷達看不到的雨，衛星和 AI 接住了",
     "tags": [
       "文章",
       "Satellite",
@@ -128,13 +128,13 @@
       "Remote Sensing"
     ],
     "status": "done",
-    "excerpt": "AI 技術在衛星遙測上的機會與挑戰 1. 衛星遙測結合 AI 的應用潛力 劉老師在中研院的研究主要運用機器學習來增進衛星感測的準確度與靈敏性。透過結合衛星雲圖的圖像辨識與光學反射率等多種感測器數據，AI 能分析地球上的即時資訊。這項技術在災",
+    "excerpt": "地面雷達的手伸得再長，也只摸得到方圓 200 公里內的雨；再往外，海面上下不下雨，只能用猜的。 台灣年年被颱風和豪雨提醒：預報準一點，撤離就能早一點，受災的人就少一點。中研院劉老師的研究，把機器學習搬進衛星感測，想補的正是「雷達看不到」與「",
     "replyCount": 0
   },
   {
     "id": "20230501-financial-sentiment-quantification-platform-via-heterogeneous-text-mining",
     "date": "2023-05-01",
-    "title": "Financial Sentiment Quantification Platform via Heterogeneous Text Mining",
+    "title": "讀懂一句財報裡的兩種情緒：把新聞變成交易訊號的金融輿情平台",
     "tags": [
       "作品",
       "Financial NLP",
@@ -145,13 +145,13 @@
       "Alternative Data"
     ],
     "status": "done",
-    "excerpt": "摘要 在現代金融市場中，資訊傳播速度與市場效率的提升，使得僅依賴價格與成交量等傳統技術指標的獲利空間逐漸被壓縮。大量具有前瞻價值的市場訊號，已轉移至新聞、財報、公告與社群輿情等 非結構化文本（Alternative Data） 之中。 本專",
+    "excerpt": "半夜十二點，法說會逐字稿、新聞快訊、公告和社群留言，全部擠在同一分鐘跳出來。你一個人，真的讀不完。 這不是效率問題，是資訊結構的問題——真正有價值的訊號，早就從價格與成交量，搬進了新聞、公告與社群輿情裡，而人眼讀新聞的速度，永遠追不上事件發",
     "replyCount": 0
   },
   {
     "id": "20230301-machine-learning-enabled-minimal-latency-wireless-networking-for-emerging-ai-applications",
     "date": "2023-03-01",
-    "title": "Machine Learning Enabled Minimal Latency Wireless Networking for Emerging AI Applications",
+    "title": "機器人如何用無線網路互相商量？一堂重新畫出我機器學習版圖的 Networked AI 課",
     "tags": [
       "文章",
       "Networked AI",
@@ -161,13 +161,13 @@
       "Cyber-Physical Systems"
     ],
     "status": "done",
-    "excerpt": "Cyber World and Physical World 在 Cyber–Physical Systems（CPS）中， 感測器（Sensors）是連結 Cyber World 與 Physical World 的關鍵元件 。透過感測器",
+    "excerpt": "我的實驗室做文字探勘、GAN 影像辨識、聯邦學習——從沒想過，原來機器人和機器人之間，也需要學會怎麼「商量」。 在 Cyber Physical Systems 裡，感測器是連接真實世界與數位世界的唯一橋樑；當一群機器人要在同一個環境裡各自",
     "replyCount": 0
   },
   {
     "id": "20230101-winograd-architecture-design-for-edge-ai-accelerator",
     "date": "2023-01-01",
-    "title": "Winograd Architecture Design for Edge AI Accelerator",
+    "title": "乘法從六次砍到四次：Winograd 怎麼替 Edge AI 晶片省力氣",
     "tags": [
       "文章",
       "AI Accelerator",
@@ -177,13 +177,13 @@
       "Hardware-Algorithm Co-design"
     ],
     "status": "done",
-    "excerpt": "課程背景與主題概述 繼上星期陳老師介紹以硬體架構加速邊緣 AI 運算後，本週講師則著重於 從演算法層面切入，以降低整體運算成本 。課程核心目標在於說明如何運用 Winograd 演算法 ，設計能適用於不同運算需求的 AI Accelerat",
+    "excerpt": "一維陣列的乘法，傳統作法要算六次乘法、四次加減法；換一套分解方式，乘法可以砍到只剩四次。 這一週的邊緣 AI 加速器課程，把戰場從硬體搬到演算法層。上星期陳老師才示範完怎麼用硬體架構加速邊緣 AI 運算，這星期講師接著往下說：乘法次數本身也",
     "replyCount": 0
   },
   {
     "id": "20221101-addressing-imbalance-in-UNSW",
     "date": "2022-11-01",
-    "title": "Addressing Imbalance in UNSW-NB15 Dataset",
+    "title": "UNSW-NB15 裡消失的蠕蟲攻擊：用 ctGAN 補回被資料不平衡吃掉的樣本",
     "tags": [
       "作品",
       "Cybersecurity",
@@ -194,13 +194,13 @@
       "SMOTE"
     ],
     "status": "done",
-    "excerpt": "1. 前言：資安資料的「大海撈針」難題 在網路安全領域，我們經常面臨一個棘手的情況： 正常的流量數據極其龐大，而真正的攻擊行為（異常數據）卻少之又少。 以我們使用的 UNSW NB15 資料集為例，雖然它包含了 9 種不同類型的攻擊行為，但",
+    "excerpt": "在幾萬筆網路流量紀錄裡，真正的攻擊往往只占其中幾十筆——蠕蟲攻擊 Worms 的樣本數，可能連一頁試算表都湊不滿。 這不是無關痛癢的統計瑕疵。當入侵偵測模型只看得見「正常流量」與「常見攻擊」，它學到的第一件事就是忽略稀有攻擊——因為忽略它們",
     "replyCount": 0
   },
   {
     "id": "20220901-the-future-of-computer-interfaces-in-metaverse",
     "date": "2022-09-01",
-    "title": "The Future of Computer Interfaces in Metaverse",
+    "title": "手腕上的震動，先於你的手指——一堂人機介面課的記事",
     "tags": [
       "文章",
       "Human-Computer Interaction",
@@ -210,13 +210,13 @@
       "Machine Learning"
     ],
     "status": "done",
-    "excerpt": "Human–Computer Interface（人機介面） 人機介面（Human–Computer Interface, HCI）是一個高度跨領域的研究與應用領域，涵蓋電腦科學、工程、設計、心理學與人因工程等。其核心目標在於設計人類與科技",
+    "excerpt": "手腕上一圈感測器，讀到的不是脈搏，是手指正要按下的那個鍵。講師在台上戴上一只穿戴式手環，畫面裡的手部動作還很細微，遊戲裡的操作指令卻已經又快又準——這是一堂人機介面（Human–Computer Interface, HCI）課，重點卻不在",
     "replyCount": 0
   },
   {
     "id": "20220601-neural-extractive-text-summarization-with-syntactic-compression",
     "date": "2022-06-01",
-    "title": "Neural Extractive Text Summarization with Syntactic Compression",
+    "title": "Not Every Clause Deserves to Survive: Teaching a Summarizer What's Safe to Cut",
     "tags": [
       "作品",
       "Text Summarization",
@@ -226,13 +226,13 @@
       "Neural Networks"
     ],
     "status": "done",
-    "excerpt": "Overview This project proposes a joint extractive and compressive text summarization system that integrates neural sente",
+    "excerpt": "A sentence pulled straight out of a news article and dropped into a summary keeps everything: its subordinate clause, it",
     "replyCount": 0
   },
   {
     "id": "20220301-flight-route-network-analysis-via-link-prediction-and-optimization",
     "date": "2022-03-01",
-    "title": "Flight Route Network Analysis via Link Prediction and Optimization",
+    "title": "Who Should Your Alliance Let In Next? Scoring Airlines with Graph Optimization",
     "tags": [
       "作品",
       "Social Network Analysis",
@@ -242,13 +242,13 @@
       "Convex Optimization"
     ],
     "status": "done",
-    "excerpt": "Overview This project studies global airline route networks from a graph theoretic perspective, focusing on link predict",
+    "excerpt": "Fifty nine thousand routes. Three thousand two hundred nine airports. Five hundred thirty one airlines. Somewhere inside",
     "replyCount": 0
   },
   {
     "id": "20211201-vision-transformer-image-recognition-with-pure-attention",
     "date": "2021-12-01",
-    "title": "Vision Transformer: Image Recognition with Pure Attention",
+    "title": "The Vision Model That Learned to See Without Convolutions",
     "tags": [
       "作品",
       "Vision Transformer",
@@ -258,7 +258,7 @@
       "Representation Learning"
     ],
     "status": "done",
-    "excerpt": "Overview This project provides a systematic analysis of Vision Transformer (ViT) , a pure attention based architecture f",
+    "excerpt": "Strip every convolution out of a state of the art vision model and replace it with plain attention. The result still hit",
     "replyCount": 0
   },
   {
@@ -296,7 +296,7 @@
       "金融教育"
     ],
     "status": "done",
-    "excerpt": "專案背景與榮譽 PP Bank 是一項以「親子金融管理」為核心的 FinTech 創新專案，榮獲 全國創新技術 API 實證競賽第一名 ，在全國 300 多組參賽隊伍 中脫穎而出，獲得評審一致肯定。 本專案不僅是一個技術展示，更是一個結合 ",
+    "excerpt": "下午的便利商店，一個孩子把攢了整年的壓歲錢推過櫃臺，想存起來。店員愣了一下——他沒有帳戶，這筆錢只能塞回紅包袋，繼續放在書桌抽屜裡。 在台灣的金融體系裡，十八歲以下的人幾乎是隱形的。PP Bank 想補的就是這道斷層：一套以親子為核心的金融",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767319574/1857a6f3f7a8eba2d3df932cb6f414b6-1024x683_tu47a4.jpg",
     "replyCount": 0
   },
@@ -314,7 +314,7 @@
   {
     "id": "20200501-shooly",
     "date": "2020-05-01",
-    "title": "Shooly 水電資訊媒合平台：以 LINE Chatbot 打造即時、透明且可信任的生活服務媒合系統",
+    "title": "Shooly：半夜水管漏水時，你只想找到一個信得過的人",
     "tags": [
       "作品",
       "LINE Chatbot",
@@ -324,7 +324,7 @@
       "Smart City"
     ],
     "status": "done",
-    "excerpt": "專案榮譽與背景 Shooly—水電資訊媒合平台 ，榮獲 「2020 LINE Chatbot 對話機器人設計大賽」全國冠軍 。 本競賽由 LINE PROTOSTAR 新星計畫 攜手 國立臺北商業大學 聯合主辦，吸引 超過 70 組團隊、2",
+    "excerpt": "深夜的租屋處，水管忽然滲水，你抓著手機滑過一頁又一頁的評論，卻不知道該打給誰。 這種焦慮背後，是一個長期被忽略的斷層：一邊是不熟悉當地水電技師、看不懂價格是否合理的租屋族，另一邊是曝光管道有限、難以被看見的技師本人。 Shooly——水電資",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/c_fill,w_1000,h_750,ar_4:3/v1767320657/20201024chatbot003_bdumzj.webp",
     "replyCount": 0
   },
@@ -342,7 +342,7 @@
   {
     "id": "20191101-lili",
     "date": "2019-11-01",
-    "title": "粒粒珍食快取平台：以對話式平台實踐循環經濟的剩食媒合系統",
+    "title": "粒粒珍食：把打烊前捨不得丟的菜，換個人接住",
     "tags": [
       "作品",
       "循環經濟",
@@ -352,7 +352,7 @@
       "Platform Design"
     ],
     "status": "done",
-    "excerpt": "專案背景與動機 食物浪費是一個長期存在卻被低估的結構性問題。 根據統計， 台灣於 2021 年的廚餘總量高達 1006 萬噸 ，平均每人每年製造約 20.6 公斤廚餘 ；放眼全球，約有 三分之一的食物在生產過程中被丟棄 。更嚴重的是，學界估",
+    "excerpt": "晚上九點，巷口那家小吃店打烊前，老闆盯著蒸箱裡剩下的三份熱炒——倒掉可惜，留著又不知道要留給誰。 這樣的猶豫，每天在無數店家的打烊時刻重演。根據統計，台灣於 2021 年的廚餘總量高達 1006 萬噸，平均每人每年製造約 20.6 公斤廚餘",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767321723/%E6%88%AA%E5%9C%96_2026-01-02_%E4%B8%8A%E5%8D%8810.41.19_njpy93.webp",
     "replyCount": 0
   },
