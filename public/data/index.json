@@ -294,90 +294,18 @@
     "replyCount": 3
   },
   {
-    "id": "20200801-ppbank",
-    "date": "2020-08-01",
-    "title": "PP-Bank：給還不能開戶的孩子，一本看得見的存摺",
+    "id": "20201101-startup-journey",
+    "date": "2020-11-01",
+    "title": "創業歷程：從搶救剩食，到全國冠軍的親子銀行",
     "tags": [
       "作品",
-      "FinTech",
-      "Open Banking",
-      "API 設計",
-      "數位金融",
-      "金融教育",
+      "創業",
       "獎項"
     ],
     "status": "done",
-    "excerpt": "下午的便利商店，一個孩子把攢了整年的壓歲錢推過櫃臺，想存起來。店員愣了一下——他沒有帳戶，這筆錢只能塞回紅包袋，繼續放在書桌抽屜裡。 在台灣的金融體系裡，十八歲以下的人幾乎是隱形的。這是我們報名全國創新技術 API 實證競賽時，決定要動手解",
-    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767319574/1857a6f3f7a8eba2d3df932cb6f414b6-1024x683_tu47a4.jpg",
-    "replyCount": 1,
+    "excerpt": "研究所那幾年，我沒辦法只當一個把功能寫完的人。看到一個問題卡在那裡，就會忍不住想：能不能做一個東西，真的把它接住？ 於是有了三次動手——先是替打烊前的剩食找新主人的 粒粒珍食 ，接著是半夜水管漏水時幫你找到信得過師傅的 Shooly ，最後",
+    "replyCount": 5,
     "featured": true
-  },
-  {
-    "id": "20200601-award-1",
-    "date": "2020-06-01",
-    "title": "第一名（冠軍）",
-    "tags": [
-      "獎項"
-    ],
-    "status": "done",
-    "excerpt": "LINE Chatbot 對話機器人設計大賽 開發「Shooly」，一個創新的水電服務預約機器人。",
-    "replyCount": 0
-  },
-  {
-    "id": "20200501-shooly",
-    "date": "2020-05-01",
-    "title": "Shooly：半夜水管漏水時，你只想找到一個信得過的人",
-    "tags": [
-      "作品",
-      "LINE Chatbot",
-      "Conversational Commerce",
-      "Service Matching",
-      "API Integration",
-      "Smart City"
-    ],
-    "status": "done",
-    "excerpt": "深夜的租屋處，水管忽然滲水，你抓著手機滑過一頁又一頁的評論，卻不知道該打給誰。 這種焦慮背後，是一個長期被忽略的斷層：一邊是不熟悉當地水電技師、看不懂價格是否合理的租屋族，另一邊是曝光管道有限、難以被看見的技師本人。 Shooly——水電資",
-    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/c_fill,w_1000,h_750,ar_4:3/v1767320657/20201024chatbot003_bdumzj.webp",
-    "replyCount": 0
-  },
-  {
-    "id": "20200101-award-2",
-    "date": "2020-01-01",
-    "title": "創業賽事常勝軍",
-    "tags": [
-      "獎項"
-    ],
-    "status": "done",
-    "excerpt": "經濟部 / 科技部 / 教育部 創業歸故里決賽、FITI 全國 40 強、教育部 U Start 補助。",
-    "replyCount": 0
-  },
-  {
-    "id": "20191101-lili",
-    "date": "2019-11-01",
-    "title": "粒粒珍食：把打烊前捨不得丟的菜，換個人接住",
-    "tags": [
-      "作品",
-      "循環經濟",
-      "剩食媒合",
-      "LINE Chatbot",
-      "ESG",
-      "Platform Design"
-    ],
-    "status": "done",
-    "excerpt": "晚上九點，巷口那家小吃店打烊前，老闆盯著蒸箱裡剩下的三份熱炒——倒掉可惜，留著又不知道要留給誰。 這樣的猶豫，每天在無數店家的打烊時刻重演。根據統計，台灣於 2021 年的廚餘總量高達 1006 萬噸，平均每人每年製造約 20.6 公斤廚餘",
-    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767321723/%E6%88%AA%E5%9C%96_2026-01-02_%E4%B8%8A%E5%8D%8810.41.19_njpy93.webp",
-    "replyCount": 0
-  },
-  {
-    "id": "20190501-award-3",
-    "date": "2019-05-01",
-    "title": "第二名",
-    "tags": [
-      "獎項"
-    ],
-    "status": "done",
-    "excerpt": "中科智慧創新創業競賽 開發線上智慧展覽館。",
-    "replyCount": 0
   },
   {
     "id": "20190101-award-4",
