@@ -28,7 +28,7 @@ export function buildIndex(threadsDir) {
       id: p.id, date: p.date, title: p.title || '',
       tags: p.tags || [], status: p.status,
       excerpt: plain.slice(0, EXCERPT_LEN),
-      cover: p.cover ? `/threads/${p.id}/${p.cover}` : undefined,
+      cover: p.cover ? (/^https?:\/\//.test(p.cover) ? p.cover : `/threads/${p.id}/${p.cover}`) : undefined,
       replyCount: (p.replies || []).length,
     };
   });

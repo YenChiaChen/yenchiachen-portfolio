@@ -15,12 +15,26 @@ fs.writeFileSync(path.join(dir, 'post.json'), JSON.stringify({
   replies: [{ date: '2024-02-01', body: 'r1' }, { date: '2024-03-01', body: 'r2' }],
 }));
 
+const dir2 = path.join(tmp, '20200801-external-cover');
+fs.mkdirSync(path.join(dir2, 'images'), { recursive: true });
+fs.writeFileSync(path.join(dir2, 'post.json'), JSON.stringify({
+  id: '20200801-external-cover', date: '2020-08-01', title: 'External Cover',
+  tags: ['作品'], status: 'done',
+  body: '外部封面圖測試',
+  cover: 'https://res.cloudinary.com/demo/image/upload/x.jpg',
+  replies: [],
+}));
+
 const idx = buildIndex(tmp);
-assert.equal(idx.length, 1);
-const e = idx[0];
+assert.equal(idx.length, 2);
+const e = idx.find(x => x.id === '20240115-demo');
 assert.equal(e.id, '20240115-demo');
 assert.equal(e.replyCount, 2);
-assert.equal(e.cover, '/threads/20240115-demo/images/c.png');
+assert.equal(e.cover, '/threads/20240115-demo/images/c.png', '相對路徑 cover 應解析為 /threads/<id>/<cover>');
 assert.ok(!/[#*`\[\]]/.test(e.excerpt), 'excerpt 應為去 markdown 的純文字');
 assert.ok(e.excerpt.startsWith('標題'), 'excerpt 內容: ' + e.excerpt);
+
+const ext = idx.find(x => x.id === '20200801-external-cover');
+assert.equal(ext.cover, 'https://res.cloudinary.com/demo/image/upload/x.jpg', '絕對 http(s) cover 應原樣輸出，不加 /threads/<id>/ 前綴');
+
 console.log('build-index ok');
