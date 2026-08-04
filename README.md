@@ -35,7 +35,7 @@ npm run dev
    - 標題
    - 內文（Markdown 格式，支援 KaTeX 數學式）
    - 標籤列表
-   - 狀態：`想做` / `進行中` / `完成`
+   - 狀態 `status`：`todo`（顯示「想做」）/ `doing`（顯示「進行中」）/ `done`（顯示「完成」）
    - 日期（YYYY-MM-DD）
    - 封面圖片（選填）
 4. **上傳圖片**：拖曳或選檔上傳，後台自動存到 `public/threads/<id>/images/`
