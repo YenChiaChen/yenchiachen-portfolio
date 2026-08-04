@@ -283,15 +283,15 @@
     "featured": true
   },
   {
-    "id": "20210101-exp-0",
+    "id": "20210101-experience",
     "date": "2021-01-01",
-    "title": "全端工程師｜個人工作室",
+    "title": "這些年待過的地方：從 ERP、行動 App 到自己的工作室",
     "tags": [
       "經歷"
     ],
-    "status": "done",
-    "excerpt": "精通 TypeScript / React / Go 生態系。 為上市公司提供 ESG 平台、CMS 後台與品牌形象網站開發。 對我而言，寫 Code 是冥想的一種。",
-    "replyCount": 0
+    "status": "doing",
+    "excerpt": "現在的我，是個人工作室的全端工程師。TypeScript、React、Go 是日常，替上市公司做過 ESG 平台、CMS 後台與品牌形象網站。對我來說，寫 Code 是一種冥想。 但這條路不是一開始就長這樣——它從一間電子公司的 ERP 系",
+    "replyCount": 3
   },
   {
     "id": "20200801-ppbank",
@@ -388,39 +388,6 @@
     ],
     "status": "done",
     "excerpt": "全大運 / 台科精誠盃 十二年體保生生涯，台北市冠軍、台科精誠盃男單冠軍，台科大網球隊隊長。",
-    "replyCount": 0
-  },
-  {
-    "id": "20190101-exp-1",
-    "date": "2019-01-01",
-    "title": "共同創辦人 & CTO｜Homie Studio",
-    "tags": [
-      "經歷"
-    ],
-    "status": "done",
-    "excerpt": "負責 Swift / Java 行動應用開發。 研發多款獲獎產品，包含金融與居家服務 App。 曾經有過連續 56 小時在線 Debug 的紀錄。",
-    "replyCount": 0
-  },
-  {
-    "id": "20170901-exp-3",
-    "date": "2017-09-01",
-    "title": "學士 / 碩士｜臺灣科技大學",
-    "tags": [
-      "經歷"
-    ],
-    "status": "done",
-    "excerpt": "專研 C++ / Python 與深度學習應用。 主導多項產學合作與資安國際論文發表。",
-    "replyCount": 0
-  },
-  {
-    "id": "20160101-exp-2",
-    "date": "2016-01-01",
-    "title": "研發工程師｜至上電子",
-    "tags": [
-      "經歷"
-    ],
-    "status": "done",
-    "excerpt": "使用 C / .NET / MySQL 構建企業基礎設施。 開發與維護內部 MIS 與 ERP 系統。",
     "replyCount": 0
   }
 ]
