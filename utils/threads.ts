@@ -1,4 +1,4 @@
-import { filterThreads } from './filter.mjs';
+import { filterThreads as filterThreadsImpl } from './filter.mjs';
 
 export type ThreadStatus = 'todo' | 'doing' | 'done';
 export interface ThreadReply { date: string; body: string; images?: string[]; }
@@ -11,7 +11,10 @@ export interface ThreadIndexEntry {
   status: ThreadStatus; excerpt: string; cover?: string; replyCount: number;
 }
 
-export { filterThreads };
+export const filterThreads: (
+  entries: ThreadIndexEntry[],
+  f: { tags: string[]; status: ThreadStatus | null }
+) => ThreadIndexEntry[] = filterThreadsImpl;
 
 export async function fetchIndex(): Promise<ThreadIndexEntry[]> {
   const res = await fetch('/data/index.json');
