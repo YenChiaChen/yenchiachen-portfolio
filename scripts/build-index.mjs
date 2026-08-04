@@ -30,6 +30,7 @@ export function buildIndex(threadsDir) {
       excerpt: plain.slice(0, EXCERPT_LEN),
       cover: p.cover ? (/^https?:\/\//.test(p.cover) ? p.cover : `/threads/${p.id}/${p.cover}`) : undefined,
       replyCount: (p.replies || []).length,
+      featured: p.featured || undefined,
     };
   });
   // 反時間序（新到舊）

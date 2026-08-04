@@ -3,6 +3,7 @@ import { fetchIndex, filterThreads, type ThreadIndexEntry, type ThreadStatus } f
 import { ProfileHeader } from './ProfileHeader';
 import { FilterBar } from './FilterBar';
 import { ThreadCard } from './ThreadCard';
+import { FeaturedStrip } from './FeaturedStrip';
 import { SEO } from './SEO';
 
 export const Timeline: React.FC = () => {
@@ -19,13 +20,18 @@ export const Timeline: React.FC = () => {
   const shown = useMemo(
     () => entries ? filterThreads(entries, { tags, status }) : [],
     [entries, tags, status]);
+  const featured = useMemo(
+    () => entries ? entries.filter(e => e.featured) : [],
+    [entries]);
 
+  const filtering = tags.length > 0 || status !== null;
   const toggleTag = (t: string) => setTags(p => p.includes(t) ? p.filter(x => x !== t) : [...p, t]);
 
   return (
     <div className="min-h-screen bg-bg text-ink">
       <SEO />
       <ProfileHeader />
+      {!filtering && <FeaturedStrip entries={featured} />}
       {entries && <FilterBar allTags={allTags} selectedTags={tags} onToggleTag={toggleTag}
         selectedStatus={status} onSelectStatus={setStatus} />}
       <main className="max-w-2xl mx-auto px-6">

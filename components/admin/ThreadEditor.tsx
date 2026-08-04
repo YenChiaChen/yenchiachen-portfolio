@@ -48,6 +48,13 @@ export const ThreadEditor: React.FC<{ initial: Thread | null; onDone: () => void
       </div>
       <input className="w-full border border-line px-2 py-1" placeholder="標題" value={t.title} onChange={e => setT(p => ({ ...p, title: e.target.value }))} />
       <input className="w-full border border-line px-2 py-1" placeholder="標籤（逗號分隔）" value={tagsText} onChange={e => setTagsText(e.target.value)} />
+      <div className="flex items-center gap-4 flex-wrap">
+        <label className="flex items-center gap-2 text-sm text-sub">
+          <input type="checkbox" checked={!!t.featured} onChange={e => setT(p => ({ ...p, featured: e.target.checked }))} />
+          ★ 精選（放上首頁代表作帶）
+        </label>
+        <input className="flex-grow min-w-[12rem] border border-line px-2 py-1 text-sm" placeholder="封面圖 URL 或 images/xxx（可留空）" value={t.cover ?? ''} onChange={e => setT(p => ({ ...p, cover: e.target.value || undefined }))} />
+      </div>
       <textarea className="w-full h-56 border border-line px-2 py-1 font-mono text-sm" placeholder="內文 markdown" value={t.body} onChange={e => setT(p => ({ ...p, body: e.target.value }))} />
       <input type="file" accept="image/*" onChange={e => e.target.files?.[0] && upload(e.target.files[0], 'body')} />
 

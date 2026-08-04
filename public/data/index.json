@@ -14,7 +14,8 @@
     "status": "done",
     "excerpt": "螢幕上的進度條跑滿六個小時，準確率停在五成出頭。這不是答案，是重新設計架構、重新調超參數、再等一輪的入場券。 這是 MLOps 領域裡最磨人的一段路：架構設計、超參數調整、不斷試錯，每一步都得真的跑一次訓練才知道結果，耗時又燒資源。如果能在",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767320245/IMG_7797_cidqs3.webp",
-    "replyCount": 0
+    "replyCount": 0,
+    "featured": true
   },
   {
     "id": "20240601-semantic-reasoning-for-traffic-liability-determination-from-unstructured-text-to-automated-legal-attribution",
@@ -99,6 +100,25 @@
     "status": "done",
     "excerpt": "颱風季還沒真正開始，一份模型已經先一步，把台灣最可能爆發登革熱的社區圈了出來。 這不是科幻情節，而是機器學習從分子一路做到公共衛生現場的結果。蘇老師的研究把這條路徑拆成三層：分子、病患、群體，每一層都在回答同一個問題——資料能不能比人更早看",
     "replyCount": 0
+  },
+  {
+    "id": "20230901-constructing-an-enterprise-grade-cloud-native-headless-cms",
+    "date": "2023-09-01",
+    "title": "改一個字，畫面就跟著變：一套撐住上市公司財報發布日的雲原生 Headless CMS",
+    "tags": [
+      "作品",
+      "Headless CMS",
+      "Cloud Native",
+      "Microservices",
+      "Go",
+      "TypeScript",
+      "DevOps",
+      "RBAC"
+    ],
+    "status": "done",
+    "excerpt": "營運人員在編輯器裡把橫幅上的一句文案改掉，畫面立刻跟著變——不用重新整理頁面，也不用等工程師重新部署。 這套系統跑在一家上市公司的生產環境裡，撐著行銷活動與財報公布當天的即時上線。企業的內容早就不是一個網頁能裝完的東西，傳統緊耦合、以頁面為",
+    "replyCount": 0,
+    "featured": true
   },
   {
     "id": "20230801-reconfigurable-process-element-design-for-edge-ai",
@@ -259,7 +279,8 @@
     ],
     "status": "done",
     "excerpt": "Strip every convolution out of a state of the art vision model and replace it with plain attention. The result still hit",
-    "replyCount": 0
+    "replyCount": 0,
+    "featured": true
   },
   {
     "id": "20210101-exp-0",
@@ -273,17 +294,6 @@
     "replyCount": 0
   },
   {
-    "id": "20201101-award-0",
-    "date": "2020-11-01",
-    "title": "金獎（冠軍）",
-    "tags": [
-      "獎項"
-    ],
-    "status": "done",
-    "excerpt": "華南金控金融科技競賽 API 實證組全國第一。主導金融服務架構設計與產品級 API 實作。",
-    "replyCount": 0
-  },
-  {
     "id": "20200801-ppbank",
     "date": "2020-08-01",
     "title": "PP-Bank：給還不能開戶的孩子，一本看得見的存摺",
@@ -293,12 +303,14 @@
       "Open Banking",
       "API 設計",
       "數位金融",
-      "金融教育"
+      "金融教育",
+      "獎項"
     ],
     "status": "done",
-    "excerpt": "下午的便利商店，一個孩子把攢了整年的壓歲錢推過櫃臺，想存起來。店員愣了一下——他沒有帳戶，這筆錢只能塞回紅包袋，繼續放在書桌抽屜裡。 在台灣的金融體系裡，十八歲以下的人幾乎是隱形的。PP Bank 想補的就是這道斷層：一套以親子為核心的金融",
+    "excerpt": "下午的便利商店，一個孩子把攢了整年的壓歲錢推過櫃臺，想存起來。店員愣了一下——他沒有帳戶，這筆錢只能塞回紅包袋，繼續放在書桌抽屜裡。 在台灣的金融體系裡，十八歲以下的人幾乎是隱形的。這是我們報名全國創新技術 API 實證競賽時，決定要動手解",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767319574/1857a6f3f7a8eba2d3df932cb6f414b6-1024x683_tu47a4.jpg",
-    "replyCount": 0
+    "replyCount": 1,
+    "featured": true
   },
   {
     "id": "20200601-award-1",

@@ -5,10 +5,12 @@ export interface ThreadReply { date: string; body: string; images?: string[]; }
 export interface Thread {
   id: string; date: string; title: string; tags: string[];
   status: ThreadStatus; body: string; cover?: string; replies: ThreadReply[];
+  featured?: boolean;
 }
 export interface ThreadIndexEntry {
   id: string; date: string; title: string; tags: string[];
   status: ThreadStatus; excerpt: string; cover?: string; replyCount: number;
+  featured?: boolean;
 }
 
 export const filterThreads: (
