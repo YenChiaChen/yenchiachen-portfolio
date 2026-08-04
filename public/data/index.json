@@ -54,18 +54,16 @@
     "replyCount": 0
   },
   {
-    "id": "20240115-long-text-to-image-converter-for-financial-reports",
+    "id": "20240115-learning-notes",
     "date": "2024-01-15",
-    "title": "金融視覺：當機器學會看盤，資工人找到金融科技的新藍海",
+    "title": "學習雜記：那些讓我「原來如此」的片刻",
     "tags": [
       "文章",
-      "金融視覺",
-      "FinTech",
-      "量化交易"
+      "學習雜記"
     ],
-    "status": "done",
-    "excerpt": "蔡老師在台上打了個比方：資工系工程師像運動員，現在領著令人羨慕的高薪，但體力與反應力終有一天會退場，那時候的價值該怎麼延續？ 這句話點出的不只是職涯焦慮，而是資工人正站在一個新藍海的入口。當多數工程師還在比較大廠的 offer，金融科技這塊",
-    "replyCount": 0
+    "status": "doing",
+    "excerpt": "很多東西，是在課堂上、論文裡，或某個深夜的好奇心底下學到的。這條弧是我的學習雜記——把那些讓我「原來如此」的片刻收在一起，按時間慢慢長。 從一堂人機介面課，到 Edge AI 的晶片怎麼省力氣，到衛星如何看見雷達看不到的雨。它們散落在不同領",
+    "replyCount": 7
   },
   {
     "id": "20231201-kubernetes-migration-strategy-and-hpa-latency-analysis",
@@ -84,21 +82,6 @@
     "status": "done",
     "excerpt": "流量在不到十秒內衝到平常的五倍，新的 Pod 還沒排上隊，舊的 Pod 已經開始逾時。 把服務搬上 Kubernetes，理論上該是穩定度的升級：宣告式治理、自我修復、雲原生生態一應俱全。但這次評估在對水平自動擴展（HPA, Horizon",
     "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767487918/Gemini_Generated_Image_fula6xfula6xfula_hrvl72.webp",
-    "replyCount": 0
-  },
-  {
-    "id": "20231001-applications-of-machine-learning-in-healthcare-research",
-    "date": "2023-10-01",
-    "title": "機器學習怎麼一層層看懂健康：從一顆分子，到一張登革熱地圖",
-    "tags": [
-      "文章",
-      "Healthcare AI",
-      "Bio-informatics",
-      "Public Health",
-      "Machine Learning"
-    ],
-    "status": "done",
-    "excerpt": "颱風季還沒真正開始，一份模型已經先一步，把台灣最可能爆發登革熱的社區圈了出來。 這不是科幻情節，而是機器學習從分子一路做到公共衛生現場的結果。蘇老師的研究把這條路徑拆成三層：分子、病患、群體，每一層都在回答同一個問題——資料能不能比人更早看",
     "replyCount": 0
   },
   {
@@ -121,37 +104,6 @@
     "featured": true
   },
   {
-    "id": "20230801-reconfigurable-process-element-design-for-edge-ai",
-    "date": "2023-08-01",
-    "title": "白板上那塊會變形的運算單元：Edge AI 的可重構 PE 設計",
-    "tags": [
-      "文章",
-      "Edge AI",
-      "AI Accelerator",
-      "Reconfigurable PE",
-      "Quantization",
-      "CNN"
-    ],
-    "status": "done",
-    "excerpt": "我做的是資料科學。很長一段時間，我以為「讓模型變快」這件事，就是把演算法寫漂亮一點、把資料降維正規化弄乾淨一點。 直到那堂課，陳老師在白板上畫下一個會「變形」的運算單元——同一塊硬體，能自己伸縮去配合不同精度的運算。那一刻我才發現，加速這件",
-    "replyCount": 0
-  },
-  {
-    "id": "20230601-opportunity-and-challenge-of-ai-technique-on-satellite-remote-sensing",
-    "date": "2023-06-01",
-    "title": "雷達看不到的雨，衛星和 AI 接住了",
-    "tags": [
-      "文章",
-      "Satellite",
-      "Precipitation",
-      "DGMR",
-      "Remote Sensing"
-    ],
-    "status": "done",
-    "excerpt": "地面雷達的手伸得再長，也只摸得到方圓 200 公里內的雨；再往外，海面上下不下雨，只能用猜的。 台灣年年被颱風和豪雨提醒：預報準一點，撤離就能早一點，受災的人就少一點。中研院劉老師的研究，把機器學習搬進衛星感測，想補的正是「雷達看不到」與「",
-    "replyCount": 0
-  },
-  {
     "id": "20230501-financial-sentiment-quantification-platform-via-heterogeneous-text-mining",
     "date": "2023-05-01",
     "title": "讀懂一句財報裡的兩種情緒：把新聞變成交易訊號的金融輿情平台",
@@ -169,38 +121,6 @@
     "replyCount": 0
   },
   {
-    "id": "20230301-machine-learning-enabled-minimal-latency-wireless-networking-for-emerging-ai-applications",
-    "date": "2023-03-01",
-    "title": "機器人如何用無線網路互相商量？一堂重新畫出我機器學習版圖的 Networked AI 課",
-    "tags": [
-      "文章",
-      "Networked AI",
-      "Wireless Networking",
-      "Multi-Agent Systems",
-      "Edge AI",
-      "Cyber-Physical Systems"
-    ],
-    "status": "done",
-    "excerpt": "我的實驗室做文字探勘、GAN 影像辨識、聯邦學習——從沒想過，原來機器人和機器人之間，也需要學會怎麼「商量」。 在 Cyber Physical Systems 裡，感測器是連接真實世界與數位世界的唯一橋樑；當一群機器人要在同一個環境裡各自",
-    "replyCount": 0
-  },
-  {
-    "id": "20230101-winograd-architecture-design-for-edge-ai-accelerator",
-    "date": "2023-01-01",
-    "title": "乘法從六次砍到四次：Winograd 怎麼替 Edge AI 晶片省力氣",
-    "tags": [
-      "文章",
-      "AI Accelerator",
-      "Winograd Algorithm",
-      "Edge AI",
-      "CNN Optimization",
-      "Hardware-Algorithm Co-design"
-    ],
-    "status": "done",
-    "excerpt": "一維陣列的乘法，傳統作法要算六次乘法、四次加減法；換一套分解方式，乘法可以砍到只剩四次。 這一週的邊緣 AI 加速器課程，把戰場從硬體搬到演算法層。上星期陳老師才示範完怎麼用硬體架構加速邊緣 AI 運算，這星期講師接著往下說：乘法次數本身也",
-    "replyCount": 0
-  },
-  {
     "id": "20221101-addressing-imbalance-in-UNSW",
     "date": "2022-11-01",
     "title": "UNSW-NB15 裡消失的蠕蟲攻擊：用 ctGAN 補回被資料不平衡吃掉的樣本",
@@ -215,22 +135,6 @@
     ],
     "status": "done",
     "excerpt": "在幾萬筆網路流量紀錄裡，真正的攻擊往往只占其中幾十筆——蠕蟲攻擊 Worms 的樣本數，可能連一頁試算表都湊不滿。 這不是無關痛癢的統計瑕疵。當入侵偵測模型只看得見「正常流量」與「常見攻擊」，它學到的第一件事就是忽略稀有攻擊——因為忽略它們",
-    "replyCount": 0
-  },
-  {
-    "id": "20220901-the-future-of-computer-interfaces-in-metaverse",
-    "date": "2022-09-01",
-    "title": "手腕上的震動，先於你的手指——一堂人機介面課的記事",
-    "tags": [
-      "文章",
-      "Human-Computer Interaction",
-      "Metaverse",
-      "Wearable Devices",
-      "Sensors",
-      "Machine Learning"
-    ],
-    "status": "done",
-    "excerpt": "手腕上一圈感測器，讀到的不是脈搏，是手指正要按下的那個鍵。講師在台上戴上一只穿戴式手環，畫面裡的手部動作還很細微，遊戲裡的操作指令卻已經又快又準——這是一堂人機介面（Human–Computer Interface, HCI）課，重點卻不在",
     "replyCount": 0
   },
   {
