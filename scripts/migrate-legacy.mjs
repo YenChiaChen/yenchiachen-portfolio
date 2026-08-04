@@ -4,7 +4,8 @@ import { writeIndex } from './build-index.mjs';
 
 const OUT = 'public/threads';
 
-// 極簡 frontmatter 解析（對齊 utils/markdownLoader 的行為）
+// 極簡 frontmatter 解析（大致仿照 utils/markdownLoader 的行為，但多了續行處理，
+// 因為 markdownLoader 本身沒有處理跨行 value 的邏輯）
 // 修正：real data 中 master-thesis.md 的 title 因來源檔案手動換行而跨兩行
 // （`title: Data Complexity-aware Deep Model Performance\nForecasting`），
 // 若不處理續行會被截斷成不完整標題，故補上「無冒號的行併入前一個字串 key」的續行邏輯。
