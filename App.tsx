@@ -1,62 +1,18 @@
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { Navbar } from './components/Navbar';
-import { HeroSection } from './components/HeroSection';
-import { AboutSection } from './components/AboutSection';
-import { SkillsSection } from './components/SkillsSection';
-import { ProjectsSection } from './components/ProjectsSection';
-import { BlogSection } from './components/BlogSection';
-import { ExperienceSection } from './components/ExperienceSection';
-import { AwardsSection } from './components/AwardsSection';
-import { ContactSection } from './components/ContactSection';
-import { LanguageProvider } from './contexts/LanguageContext';
-import { Preloader } from './components/Preloader';
-import { SEO } from './components/SEO';
+import { useRoute, parseRoute } from './utils/router';
+import { Timeline } from './components/Timeline';
+import { ThreadDetail } from './components/ThreadDetail';
+import { AdminApp } from './components/admin/AdminApp';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  return (
-    <footer className="bg-bg border-t border-line py-12 relative z-10">
-      <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-sub tracking-widest uppercase">
-        <div className="mt-4 md:mt-0 opacity-50">&copy; {currentYear} Yen-Chia Chen.</div>
-      </div>
-    </footer>
-  );
-}
-
-function App() {
-  const [loading, setLoading] = useState(true);
-
+export default function App() {
+  const { path } = useRoute();
+  const route = parseRoute(path);
   return (
     <HelmetProvider>
-      <LanguageProvider>
-        <SEO />
-        {loading && <Preloader onComplete={() => setLoading(false)} />}
-        
-        {/* Main Content - rendered but potentially hidden or underneath until loading is done for smoother transition */}
-        <div className={`min-h-screen flex flex-col relative font-sans bg-bg text-ink overflow-hidden transition-opacity duration-1000 ${loading ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
-          {/* Paper Texture Overlay */}
-          <div className="fixed inset-0 bg-paper-texture pointer-events-none z-50 opacity-60 mix-blend-multiply"></div>
-          
-          <Navbar />
-          
-          <main className="flex-grow relative z-10">
-            <HeroSection />
-            <AboutSection />
-            <ExperienceSection />
-            <SkillsSection />
-            <ProjectsSection />
-            <BlogSection />
-            <AwardsSection />
-            <ContactSection />
-          </main>
-
-          <Footer />
-        </div>
-      </LanguageProvider>
+      {route.name === 'thread' ? <ThreadDetail id={route.id} />
+        : route.name === 'admin' ? <AdminApp />
+        : /* 'home' 或 'notfound' 皆退回時間軸 */ <Timeline />}
     </HelmetProvider>
   );
 }
-
-export default App;

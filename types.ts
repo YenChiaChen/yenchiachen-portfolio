@@ -50,7 +50,7 @@ export interface Award {
 
 export interface BlogPost {
   id: string;
-  slug: string; 
+  slug: string;
   title: string;
   category: string; // New field for filtering
   date: string;
@@ -58,3 +58,5 @@ export interface BlogPost {
   excerpt: string;
   coverImage?: string; // Added for preview images
 }
+
+export type { Thread, ThreadReply, ThreadStatus, ThreadIndexEntry } from './utils/threads';

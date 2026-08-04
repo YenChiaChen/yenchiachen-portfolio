@@ -1,0 +1,414 @@
+[
+  {
+    "id": "20250601-master-thesis",
+    "date": "2025-06-01",
+    "title": "Data Complexity-aware Deep Model Performance Forecasting",
+    "tags": [
+      "作品",
+      "Performance Prediction",
+      "Data Complexity",
+      "Deep Learning",
+      "MLOps",
+      "Explainable AI"
+    ],
+    "status": "done",
+    "excerpt": "1. 研究動機 (Motivation) 這項研究的起點，來自於 MLOps 領域中一個核心的痛點。 目前在開發深度學習模型時，我們往往需要經歷冗長的流程，包含架構設計、超參數調整，以及不斷的試錯 (Trial and Error)。這樣的",
+    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767320245/IMG_7797_cidqs3.webp",
+    "replyCount": 0
+  },
+  {
+    "id": "20240601-semantic-reasoning-for-traffic-liability-determination-from-unstructured-text-to-automated-legal-attribution",
+    "date": "2024-06-01",
+    "title": "Semantic Reasoning for Traffic Liability Determination: From Unstructured Text to Automated Legal Attribution",
+    "tags": [
+      "作品",
+      "Edge AI",
+      "NLP",
+      "LegalTech",
+      "Knowledge Graph",
+      "Neuro-symbolic Reasoning",
+      "Privacy-preserving"
+    ],
+    "status": "done",
+    "excerpt": "摘要 本研究提出一套 以邊緣運算（Edge Computing）為核心的交通肇事責任語意推論系統 ，旨在改善現行事故處理流程中，對非結構化文字高度依賴人工判讀所帶來的不一致性與時效問題。系統以警務人員撰寫之事故敘述（Accident Nar",
+    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767488547/Gemini_Generated_Image_ker3srker3srker3_jxixk6.webp",
+    "replyCount": 0
+  },
+  {
+    "id": "20240301-adaptive-zero-trust-architecture-via-deep-learning-log-analysis",
+    "date": "2024-03-01",
+    "title": "Adaptive Zero Trust Architecture via Deep Learning–Based Log Analysis",
+    "tags": [
+      "作品",
+      "Cybersecurity",
+      "Zero Trust",
+      "RBAC",
+      "Anomaly Detection",
+      "Deep Learning",
+      "Wazuh"
+    ],
+    "status": "done",
+    "excerpt": "Abstract 本產學合作專案旨在回應企業實務中， 傳統靜態 RBAC（Role Based Access Control）模型在面對現代資安威脅時所暴露的結構性限制 。在既有模型中，權限一旦被授予，往往僅依賴帳號與角色進行判斷，缺乏對「",
+    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767486942/13mar2018-deeplog-architecture_i8dx6g.png",
+    "replyCount": 0
+  },
+  {
+    "id": "20240115-long-text-to-image-converter-for-financial-reports",
+    "date": "2024-01-15",
+    "title": "Long Text to Image Converter for Financial Reports",
+    "tags": [
+      "文章",
+      "金融視覺",
+      "FinTech",
+      "量化交易"
+    ],
+    "status": "done",
+    "excerpt": "金融視覺與 FinTech：資工系的新藍海 1. 什麼是金融視覺 (Financial Vision)？ 「金融視覺」的概念是致敬「電腦視覺 (Computer Vision)」發展而來。 電腦視覺 ：研究如何讓機器具備「看」的功能。 金融",
+    "replyCount": 0
+  },
+  {
+    "id": "20231201-kubernetes-migration-strategy-and-hpa-latency-analysis",
+    "date": "2023-12-01",
+    "title": "Kubernetes Migration Strategy & HPA Latency Analysis",
+    "tags": [
+      "作品",
+      "Kubernetes",
+      "HPA",
+      "KEDA",
+      "Autoscaling",
+      "SRE",
+      "Observability",
+      "Capacity Planning"
+    ],
+    "status": "done",
+    "excerpt": "1. 摘要 本計畫聚焦於將既有應用服務遷移至 Kubernetes（K8s）之可行性評估與落地策略。透過 SWOT 分析、壓力測試（Stress Testing）與極限情境演練，我們驗證 Kubernetes 在宣告式治理、自我修復與雲原生",
+    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767487918/Gemini_Generated_Image_fula6xfula6xfula_hrvl72.webp",
+    "replyCount": 0
+  },
+  {
+    "id": "20231001-applications-of-machine-learning-in-healthcare-research",
+    "date": "2023-10-01",
+    "title": "Applications of Machine Learning in Healthcare Research",
+    "tags": [
+      "文章",
+      "Healthcare AI",
+      "Bio-informatics",
+      "Public Health",
+      "Machine Learning"
+    ],
+    "status": "done",
+    "excerpt": "機器學習於生物醫療研究的應用：從分子到公共衛生 1. 生物醫療研究的三大層級 (Three Levels of Healthcare AI) 蘇老師的研究將機器學習在生物醫療的應用，系統性地分為三個層級： (1) 分子層級 (Molecul",
+    "replyCount": 0
+  },
+  {
+    "id": "20230801-reconfigurable-process-element-design-for-edge-ai",
+    "date": "2023-08-01",
+    "title": "A Reconfigurable Process Element Design for Edge AI: Concepts and Structures",
+    "tags": [
+      "文章",
+      "Edge AI",
+      "AI Accelerator",
+      "Reconfigurable PE",
+      "Quantization",
+      "CNN"
+    ],
+    "status": "done",
+    "excerpt": "Edge AI 的可重構處理單元設計：概念與架構 1. 機器學習的三種視角與分類 陳老師首先以三個場景來定義機器學習，並將其技術大致分為三類： Supervised Learning (監督式學習) Unsupervised Learnin",
+    "replyCount": 0
+  },
+  {
+    "id": "20230601-opportunity-and-challenge-of-ai-technique-on-satellite-remote-sensing",
+    "date": "2023-06-01",
+    "title": "Opportunity and Challenge of AI Technique on Satellite Remote Sensing",
+    "tags": [
+      "文章",
+      "Satellite",
+      "Precipitation",
+      "DGMR",
+      "Remote Sensing"
+    ],
+    "status": "done",
+    "excerpt": "AI 技術在衛星遙測上的機會與挑戰 1. 衛星遙測結合 AI 的應用潛力 劉老師在中研院的研究主要運用機器學習來增進衛星感測的準確度與靈敏性。透過結合衛星雲圖的圖像辨識與光學反射率等多種感測器數據，AI 能分析地球上的即時資訊。這項技術在災",
+    "replyCount": 0
+  },
+  {
+    "id": "20230501-financial-sentiment-quantification-platform-via-heterogeneous-text-mining",
+    "date": "2023-05-01",
+    "title": "Financial Sentiment Quantification Platform via Heterogeneous Text Mining",
+    "tags": [
+      "作品",
+      "Financial NLP",
+      "Sentiment Analysis",
+      "FinBERT",
+      "Alpha Factors",
+      "Quantitative Trading",
+      "Alternative Data"
+    ],
+    "status": "done",
+    "excerpt": "摘要 在現代金融市場中，資訊傳播速度與市場效率的提升，使得僅依賴價格與成交量等傳統技術指標的獲利空間逐漸被壓縮。大量具有前瞻價值的市場訊號，已轉移至新聞、財報、公告與社群輿情等 非結構化文本（Alternative Data） 之中。 本專",
+    "replyCount": 0
+  },
+  {
+    "id": "20230301-machine-learning-enabled-minimal-latency-wireless-networking-for-emerging-ai-applications",
+    "date": "2023-03-01",
+    "title": "Machine Learning Enabled Minimal Latency Wireless Networking for Emerging AI Applications",
+    "tags": [
+      "文章",
+      "Networked AI",
+      "Wireless Networking",
+      "Multi-Agent Systems",
+      "Edge AI",
+      "Cyber-Physical Systems"
+    ],
+    "status": "done",
+    "excerpt": "Cyber World and Physical World 在 Cyber–Physical Systems（CPS）中， 感測器（Sensors）是連結 Cyber World 與 Physical World 的關鍵元件 。透過感測器",
+    "replyCount": 0
+  },
+  {
+    "id": "20230101-winograd-architecture-design-for-edge-ai-accelerator",
+    "date": "2023-01-01",
+    "title": "Winograd Architecture Design for Edge AI Accelerator",
+    "tags": [
+      "文章",
+      "AI Accelerator",
+      "Winograd Algorithm",
+      "Edge AI",
+      "CNN Optimization",
+      "Hardware-Algorithm Co-design"
+    ],
+    "status": "done",
+    "excerpt": "課程背景與主題概述 繼上星期陳老師介紹以硬體架構加速邊緣 AI 運算後，本週講師則著重於 從演算法層面切入，以降低整體運算成本 。課程核心目標在於說明如何運用 Winograd 演算法 ，設計能適用於不同運算需求的 AI Accelerat",
+    "replyCount": 0
+  },
+  {
+    "id": "20221101-addressing-imbalance-in-UNSW",
+    "date": "2022-11-01",
+    "title": "Addressing Imbalance in UNSW-NB15 Dataset",
+    "tags": [
+      "作品",
+      "Cybersecurity",
+      "Imbalanced Data",
+      "UNSW-NB15",
+      "GAN",
+      "ctGAN",
+      "SMOTE"
+    ],
+    "status": "done",
+    "excerpt": "1. 前言：資安資料的「大海撈針」難題 在網路安全領域，我們經常面臨一個棘手的情況： 正常的流量數據極其龐大，而真正的攻擊行為（異常數據）卻少之又少。 以我們使用的 UNSW NB15 資料集為例，雖然它包含了 9 種不同類型的攻擊行為，但",
+    "replyCount": 0
+  },
+  {
+    "id": "20220901-the-future-of-computer-interfaces-in-metaverse",
+    "date": "2022-09-01",
+    "title": "The Future of Computer Interfaces in Metaverse",
+    "tags": [
+      "文章",
+      "Human-Computer Interaction",
+      "Metaverse",
+      "Wearable Devices",
+      "Sensors",
+      "Machine Learning"
+    ],
+    "status": "done",
+    "excerpt": "Human–Computer Interface（人機介面） 人機介面（Human–Computer Interface, HCI）是一個高度跨領域的研究與應用領域，涵蓋電腦科學、工程、設計、心理學與人因工程等。其核心目標在於設計人類與科技",
+    "replyCount": 0
+  },
+  {
+    "id": "20220601-neural-extractive-text-summarization-with-syntactic-compression",
+    "date": "2022-06-01",
+    "title": "Neural Extractive Text Summarization with Syntactic Compression",
+    "tags": [
+      "作品",
+      "Text Summarization",
+      "NLP",
+      "Information Retrieval",
+      "Syntactic Parsing",
+      "Neural Networks"
+    ],
+    "status": "done",
+    "excerpt": "Overview This project proposes a joint extractive and compressive text summarization system that integrates neural sente",
+    "replyCount": 0
+  },
+  {
+    "id": "20220301-flight-route-network-analysis-via-link-prediction-and-optimization",
+    "date": "2022-03-01",
+    "title": "Flight Route Network Analysis via Link Prediction and Optimization",
+    "tags": [
+      "作品",
+      "Social Network Analysis",
+      "Graph Theory",
+      "Link Prediction",
+      "Transportation Networks",
+      "Convex Optimization"
+    ],
+    "status": "done",
+    "excerpt": "Overview This project studies global airline route networks from a graph theoretic perspective, focusing on link predict",
+    "replyCount": 0
+  },
+  {
+    "id": "20211201-vision-transformer-image-recognition-with-pure-attention",
+    "date": "2021-12-01",
+    "title": "Vision Transformer: Image Recognition with Pure Attention",
+    "tags": [
+      "作品",
+      "Vision Transformer",
+      "Transformer",
+      "Image Classification",
+      "Attention Mechanism",
+      "Representation Learning"
+    ],
+    "status": "done",
+    "excerpt": "Overview This project provides a systematic analysis of Vision Transformer (ViT) , a pure attention based architecture f",
+    "replyCount": 0
+  },
+  {
+    "id": "20210101-exp-0",
+    "date": "2021-01-01",
+    "title": "全端工程師｜個人工作室",
+    "tags": [
+      "經歷"
+    ],
+    "status": "done",
+    "excerpt": "精通 TypeScript / React / Go 生態系。 為上市公司提供 ESG 平台、CMS 後台與品牌形象網站開發。 對我而言，寫 Code 是冥想的一種。",
+    "replyCount": 0
+  },
+  {
+    "id": "20201101-award-0",
+    "date": "2020-11-01",
+    "title": "金獎（冠軍）",
+    "tags": [
+      "獎項"
+    ],
+    "status": "done",
+    "excerpt": "華南金控金融科技競賽 API 實證組全國第一。主導金融服務架構設計與產品級 API 實作。",
+    "replyCount": 0
+  },
+  {
+    "id": "20200801-ppbank",
+    "date": "2020-08-01",
+    "title": "PP-Bank：以 API 為核心的親子金融生態系 —— 全國創新技術 API 實證組第一名",
+    "tags": [
+      "作品",
+      "FinTech",
+      "Open Banking",
+      "API 設計",
+      "數位金融",
+      "金融教育"
+    ],
+    "status": "done",
+    "excerpt": "專案背景與榮譽 PP Bank 是一項以「親子金融管理」為核心的 FinTech 創新專案，榮獲 全國創新技術 API 實證競賽第一名 ，在全國 300 多組參賽隊伍 中脫穎而出，獲得評審一致肯定。 本專案不僅是一個技術展示，更是一個結合 ",
+    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767319574/1857a6f3f7a8eba2d3df932cb6f414b6-1024x683_tu47a4.jpg",
+    "replyCount": 0
+  },
+  {
+    "id": "20200601-award-1",
+    "date": "2020-06-01",
+    "title": "第一名（冠軍）",
+    "tags": [
+      "獎項"
+    ],
+    "status": "done",
+    "excerpt": "LINE Chatbot 對話機器人設計大賽 開發「Shooly」，一個創新的水電服務預約機器人。",
+    "replyCount": 0
+  },
+  {
+    "id": "20200501-shooly",
+    "date": "2020-05-01",
+    "title": "Shooly 水電資訊媒合平台：以 LINE Chatbot 打造即時、透明且可信任的生活服務媒合系統",
+    "tags": [
+      "作品",
+      "LINE Chatbot",
+      "Conversational Commerce",
+      "Service Matching",
+      "API Integration",
+      "Smart City"
+    ],
+    "status": "done",
+    "excerpt": "專案榮譽與背景 Shooly—水電資訊媒合平台 ，榮獲 「2020 LINE Chatbot 對話機器人設計大賽」全國冠軍 。 本競賽由 LINE PROTOSTAR 新星計畫 攜手 國立臺北商業大學 聯合主辦，吸引 超過 70 組團隊、2",
+    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/c_fill,w_1000,h_750,ar_4:3/v1767320657/20201024chatbot003_bdumzj.webp",
+    "replyCount": 0
+  },
+  {
+    "id": "20200101-award-2",
+    "date": "2020-01-01",
+    "title": "創業賽事常勝軍",
+    "tags": [
+      "獎項"
+    ],
+    "status": "done",
+    "excerpt": "經濟部 / 科技部 / 教育部 創業歸故里決賽、FITI 全國 40 強、教育部 U Start 補助。",
+    "replyCount": 0
+  },
+  {
+    "id": "20191101-lili",
+    "date": "2019-11-01",
+    "title": "粒粒珍食快取平台：以對話式平台實踐循環經濟的剩食媒合系統",
+    "tags": [
+      "作品",
+      "循環經濟",
+      "剩食媒合",
+      "LINE Chatbot",
+      "ESG",
+      "Platform Design"
+    ],
+    "status": "done",
+    "excerpt": "專案背景與動機 食物浪費是一個長期存在卻被低估的結構性問題。 根據統計， 台灣於 2021 年的廚餘總量高達 1006 萬噸 ，平均每人每年製造約 20.6 公斤廚餘 ；放眼全球，約有 三分之一的食物在生產過程中被丟棄 。更嚴重的是，學界估",
+    "cover": "https://res.cloudinary.com/dcpzacz9d/image/upload/v1767321723/%E6%88%AA%E5%9C%96_2026-01-02_%E4%B8%8A%E5%8D%8810.41.19_njpy93.webp",
+    "replyCount": 0
+  },
+  {
+    "id": "20190501-award-3",
+    "date": "2019-05-01",
+    "title": "第二名",
+    "tags": [
+      "獎項"
+    ],
+    "status": "done",
+    "excerpt": "中科智慧創新創業競賽 開發線上智慧展覽館。",
+    "replyCount": 0
+  },
+  {
+    "id": "20190101-award-4",
+    "date": "2019-01-01",
+    "title": "網球成就",
+    "tags": [
+      "獎項"
+    ],
+    "status": "done",
+    "excerpt": "全大運 / 台科精誠盃 十二年體保生生涯，台北市冠軍、台科精誠盃男單冠軍，台科大網球隊隊長。",
+    "replyCount": 0
+  },
+  {
+    "id": "20190101-exp-1",
+    "date": "2019-01-01",
+    "title": "共同創辦人 & CTO｜Homie Studio",
+    "tags": [
+      "經歷"
+    ],
+    "status": "done",
+    "excerpt": "負責 Swift / Java 行動應用開發。 研發多款獲獎產品，包含金融與居家服務 App。 曾經有過連續 56 小時在線 Debug 的紀錄。",
+    "replyCount": 0
+  },
+  {
+    "id": "20170901-exp-3",
+    "date": "2017-09-01",
+    "title": "學士 / 碩士｜臺灣科技大學",
+    "tags": [
+      "經歷"
+    ],
+    "status": "done",
+    "excerpt": "專研 C++ / Python 與深度學習應用。 主導多項產學合作與資安國際論文發表。",
+    "replyCount": 0
+  },
+  {
+    "id": "20160101-exp-2",
+    "date": "2016-01-01",
+    "title": "研發工程師｜至上電子",
+    "tags": [
+      "經歷"
+    ],
+    "status": "done",
+    "excerpt": "使用 C / .NET / MySQL 構建企業基礎設施。 開發與維護內部 MIS 與 ERP 系統。",
+    "replyCount": 0
+  }
+]
