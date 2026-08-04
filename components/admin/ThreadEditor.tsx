@@ -18,7 +18,7 @@ export const ThreadEditor: React.FC<{ initial: Thread | null; onDone: () => void
   const upload = async (file: File, into: 'body' | number) => {
     const id = ensureId();
     const rel = await adminApi.uploadImage(id, file);
-    if (into === 'body') setT(p => ({ ...p, id, body: `${p.body}\n\n![](${rel})\n` }));
+    if (into === 'body') setT(p => ({ ...p, id, body: `${p.body}\n\n![](/threads/${id}/${rel})\n` }));
     else setT(p => { const r = [...p.replies]; r[into] = { ...r[into], images: [...(r[into].images ?? []), rel] }; return { ...p, id, replies: r }; });
   };
 
