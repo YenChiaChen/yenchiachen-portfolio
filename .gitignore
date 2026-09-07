@@ -25,3 +25,6 @@ dist-ssr
 
 # SDD scratch workspace (ledger, briefs, review packages)
 .superpowers/
+
+# Internal research notes — contains employer, repo, and colleague identifiers. Never publish.
+research/

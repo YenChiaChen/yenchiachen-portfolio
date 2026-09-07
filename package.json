@@ -1,35 +1,15 @@
 {
-  "name": "yenchiachen-portfolio",
-  "private": false,
-  "version": "1.0.0",
+  "name": "yenchia-blog",
+  "private": true,
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "prebuild": "node scripts/build-index.mjs",
-    "build": "tsc && vite build && cp dist/index.html dist/404.html",
-    "preview": "vite preview"
+    "build": "node build.mjs",
+    "dev": "node build.mjs && cd dist && python3 -m http.server 5180"
   },
   "dependencies": {
     "katex": "^0.16.27",
-    "lucide-react": "^0.344.0",
     "marked": "^12.0.0",
-    "marked-katex-extension": "^5.1.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-helmet-async": "^2.0.4"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.24",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "typescript": "^5.2.2",
-    "vite": "^5.1.4"
-  },
-  "overrides": {
-    "react-helmet-async": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    }
+    "marked-katex-extension": "^5.1.6"
   }
 }

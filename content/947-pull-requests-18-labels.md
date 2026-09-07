@@ -1,0 +1,131 @@
+---
+title: 947 Pull Requests, 18 Labels
+date: 2026-09-07
+tags: [Code Review, AI Agents, Research, Engineering Metrics]
+excerpt: I wanted to measure whether evidence packs make AI-authored code review faster and safer. Three days of feasibility work killed the experiment — and the reasons were more interesting than the result would have been.
+---
+
+Out of 947 merged pull requests, I could prove that exactly 18 were written by an AI agent. My team runs agents every day.
+
+That gap is the whole story. If you are planning to measure how AI changes engineering at your company, the data you are quietly assuming exists probably does not, and the cheapest way to find out is three days of counting rather than three months of running.
+
+## The experiment I wanted to run
+
+You open a pull request that an agent wrote. Three hundred lines, a clean description, tests that pass. You have no idea which parts to actually read.
+
+So you do what everyone does: you skim the diff, you trust the tests, and you approve. Or you read all of it and spend forty minutes on something that turned out to be fine. Neither feels like review.
+
+The idea was to test a fix. Take 20 to 40 real agent-authored pull requests and build two versions of each: the raw PR, and the same PR with an evidence pack attached — a test plan, a before-and-after static analysis diff, a summary of why each change was made, and links from each change back to the spec clause it implements.
+
+Randomize which reviewer sees which version. Measure three things: how long the review takes, how many real defects get found, and how often a broken PR gets waved through.
+
+It is a clean design. I did not get to run it.
+
+Three things have to be true before that design produces a number worth reading. I checked them in order, and the order turned out to matter.
+
+```mermaid
+flowchart TB
+    Q["Do evidence packs make review faster and safer?"]
+    A["Check 1 · Attribution"]
+    B["Check 2 · Ground truth"]
+    C["Check 3 · Statistical power"]
+    X["Not runnable as designed"]
+
+    Q --> A
+    A -- "FAILS — 18 of 947 identifiable" --> B
+    B -- "PASSES — about 65 usable labels" --> C
+    C -- "FAILS — 2 reviewers, detects only d ≥ 0.62" --> X
+```
+
+## Check one: can you even tell which PRs an agent wrote?
+
+Nineteen out of every thousand. That is the share of merged pull requests I could attribute to an agent with any confidence — 18 out of 947, across two repositories over six months.
+
+The commit trailer that would have made this trivial appears on about 0.7% of backend commits and 1.0% of frontend ones. The session link that would have tied a PR to an actual agent transcript has never been written in either repository. Not rarely. Never, in 5,688 merged pull requests, going back to the beginning.
+
+<figure class="bars">
+<figcaption>Merged pull requests, narrowing to what could actually be labelled</figcaption>
+<div class="bar"><span class="bar-label">Merged, all time</span><span class="bar-track"><span class="bar-fill" style="width:100%"></span></span><span class="bar-value">5,688</span></div>
+<div class="bar"><span class="bar-label">Merged in window</span><span class="bar-track"><span class="bar-fill" style="width:16.6%"></span></span><span class="bar-value">947</span></div>
+<div class="bar"><span class="bar-label">Day-to-day work</span><span class="bar-track"><span class="bar-fill" style="width:12.6%"></span></span><span class="bar-value">714</span></div>
+<div class="bar"><span class="bar-label">Attributable to an agent</span><span class="bar-track"><span class="bar-fill" style="width:0.3%"></span></span><span class="bar-value">18</span></div>
+</figure>
+
+The reason is entirely mundane. Somebody decided the trailer was noise in the commit log and turned it off, which is a completely reasonable thing to decide. Nobody was thinking about a future experiment, because why would they be.
+
+Widening the window does not rescue it — the signal density falls the further back you go. Branch names encode the ticket type, not the tool. There are no labels. There is no bot account; agents commit as the human who ran them, and one human account authored half of everything.
+
+**Attribution has to be instrumented before the fact.** You cannot reconstruct it afterwards from a repository that was not asked to record it. This is the finding I would go back and tell myself first.
+
+## Check two: can you tell which PRs were broken?
+
+This one passed, and it passed in a way I did not expect.
+
+The obvious path — find the reverts — was useless. Six revert commits in six months, and only one of them resolves cleanly back to the pull request that introduced the problem. This team reverts *inside* a branch before merging, so the bad commit never becomes part of a merged PR at all.
+
+What worked was blame. For each fix PR, take the lines it deleted, blame them against the parent commit, and map the result back to the PR that wrote them — SZZ, more or less. On a random sample of 24 fix PRs, 37.5% produced a clean, unambiguous parent. I read six of them by hand: four clearly right, one clearly wrong, one arguable. Call it 70-80% precision, which is enough with a human pass on top.
+
+The failure mode is worth naming, because it is not SZZ's fault. Both repositories were re-imported as a single squashed commit earlier this year, so any blame that lands on older code resolves to that one import — which carries the entire pre-history and tells you nothing. Nine of the eleven degenerate cases were that. There is a hard floor under this kind of archaeology, and it is wherever your repo's history was last flattened.
+
+The strongest signal was something else entirely: 28 fix PRs whose description explicitly names the earlier PR that broke the thing. Validated against merge order and file overlap, 27 of those 28 are correct pairings. Near-oracle labels, written by hand, for free.
+
+Except they are not written by hand. Those descriptions are that thorough *because* the team writes them with agent help. The property I would be measuring is the same property that made the measurement possible — which is a lovely result and a serious problem, and it means none of this transfers to a repository that works differently.
+
+## Check three: is there enough signal to detect anything?
+
+Six people have ever approved a pull request here. Two of them do substantive technical review.
+
+That number is the experiment. Everything downstream is arithmetic, and the arithmetic is brutal.
+
+Across 695 pull requests there are 1,522 review threads, which sounds healthy until you look at the distribution. The median PR has zero. 54% have zero. And 222 of them — nearly a third — were merged with no approval and no comment from anyone, most of those being the lead merging their own work, which is a normal thing for a lead to do and a fatal thing for a study to depend on.
+
+One approver has 114 approvals, 25 comments in their entire history, and 83% of their approvals carry no discussion at all. That is a manager clearing a gate, not a reviewer. They would contribute exactly nothing to the measurement.
+
+Run the power calculation on what is left. With 40 PRs in the strongest design available — every PR reviewed by both reviewers with the arms swapped — the smallest effect detectable at 80% power is around d = 0.62. Translated into the actual outcome: the evidence pack would have to cut review time roughly in half before I could distinguish it from noise.
+
+| PRs | Design | Smallest detectable effect |
+|---|---|---|
+| 20 | parallel, 10 per arm | d = 1.25 |
+| 30 | parallel, 15 per arm | d = 1.02 |
+| 40 | parallel, 20 per arm | d = 0.89 |
+| 40 | within-reviewer crossover | d = 0.74 |
+| 40 | within-PR crossover | d = 0.62 |
+
+By convention d = 0.8 is a "large" effect. Every row of that table is asking the evidence pack to do something dramatic before I could see it at all.
+
+If the real effect is a respectable 15% time saving, I would need something like 350 pull requests. That is about a year of this team's entire output.
+
+And the false-approval rate, the outcome I cared about most, is not measurable at all. It is a binary event with an unknown, low base rate and twenty observations per arm. The only way to reach it is to stop waiting for natural defects and plant them — two or three seeded bugs per PR turns forty coin flips into a few hundred, and turns "defects found" from a judgement call into a score.
+
+## The confound that would have survived all of it
+
+Here is the part that would have wasted the three months even if every check above had passed.
+
+Read the two real reviewers' comments and they are already structured like machine output: severity headers, "ran the affected tests locally, 6 of 6 pass", "git grep returns zero matches for this symbol". These people review with AI assistance today.
+
+So the "no evidence pack" arm is not an unassisted human baseline. It is a second AI-assisted condition with the assistance pointed somewhere else. Whatever number came out the far end, it would not have answered the question I thought I was asking.
+
+## What I found instead
+
+I went looking for an experiment and came back with a description of how this team actually reviews code, which turned out to be worth more.
+
+I read a random sample of 18 review threads and sorted them by what they actually were:
+
+| What the thread was | Share |
+|---|---|
+| A real defect | 33% |
+| A nit or style point | 28% |
+| Process chatter | 28% |
+| A design question | 11% |
+
+So counting threads does not count quality. An evidence pack could easily *raise* the thread count while changing nothing that matters — and process chatter is exactly the category it would inflate.
+
+More than half of merged pull requests were never discussed by anyone. The median review generates no written trace at all. Whatever review is doing here, most of it is invisible to every metric I could reach.
+
+Those are uncomfortable facts about a functioning team shipping real software, and they were sitting in an API that anyone could have queried at any point in the last six months.
+
+## What this cost, and what it saved
+
+Three days of read-only API calls and git archaeology, against a study that would have run for three months and produced a null result I could not have interpreted.
+
+The thing that kills your experiment is never the thing you were worried about. I was worried about recruiting reviewers; what actually killed it was a commit trailer somebody switched off for good reasons a year ago. Before you design the measurement, go and count the labels you are assuming exist — it takes an afternoon, and it is the only step that can save you the whole project.
