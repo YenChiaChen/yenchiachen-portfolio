@@ -24,5 +24,3 @@ Before engineering I was an athlete. Eleven years on a tennis scholarship, and s
 <div class="tl"><span class="tl-year">2023–2024</span><span class="tl-what">Industry research collaboration <span class="tl-where">· Directorate General of Highways</span></span></div>
 <div class="tl"><span class="tl-year">2026</span><span class="tl-what">Full-stack engineer <span class="tl-where">· AI startup</span></span></div>
 </div>
-
-My master's thesis was about predicting how well a model will score before you train it. During university I also built three products with teams, and none of them outlived the competitions they won; that story is in [沒有欄位的人](/p/no-slot-in-the-system/).
