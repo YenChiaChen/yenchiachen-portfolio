@@ -10,6 +10,7 @@
   --quote-bar: #d8d4cc;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
     "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Hiragino Sans", sans-serif;
+  --leading: 1.85;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "PingFang TC", "Noto Sans TC", monospace;
 }
@@ -38,7 +39,7 @@ body {
   color: var(--fg);
   font-family: var(--font);
   font-size: 18px;
-  line-height: 1.85;
+  line-height: var(--leading);
   overflow-wrap: break-word;
 }
 
@@ -345,3 +346,6 @@ pre code {
   .bars .bar { grid-template-columns: minmax(0, 7.5em) 1fr auto; gap: 8px; }
   .bars { font-size: 0.8rem; }
 }
+
+/* CJK needs more leading than Latin; Latin-only pages tighten up. */
+html[lang="en"] { --leading: 1.7; }

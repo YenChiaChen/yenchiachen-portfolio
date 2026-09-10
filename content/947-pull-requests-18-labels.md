@@ -51,9 +51,7 @@ The commit trailer that would have made this trivial appears on about 0.7% of ba
 <div class="bar"><span class="bar-label">Attributable to an agent</span><span class="bar-track"><span class="bar-fill" style="width:0.3%"></span></span><span class="bar-value">18</span></div>
 </figure>
 
-The reason is entirely mundane. Somebody decided the trailer was noise in the commit log and turned it off, which is a completely reasonable thing to decide. Nobody was thinking about a future experiment, because why would they be.
-
-Widening the window does not rescue it — the signal density falls the further back you go. Branch names encode the ticket type, not the tool. There are no labels. There is no bot account; agents commit as the human who ran them, and one human account authored half of everything.
+The reason is entirely mundane. Somebody decided the trailer was noise in the commit log and turned it off, which is a completely reasonable thing to decide. Nothing else fills the gap: branch names encode the ticket type, there are no labels, and agents commit as the human who ran them.
 
 **Attribution has to be instrumented before the fact.** You cannot reconstruct it afterwards from a repository that was not asked to record it. This is the finding I would go back and tell myself first.
 
@@ -61,15 +59,29 @@ Widening the window does not rescue it — the signal density falls the further 
 
 This one passed, and it passed in a way I did not expect.
 
-The obvious path — find the reverts — was useless. Six revert commits in six months, and only one of them resolves cleanly back to the pull request that introduced the problem. This team reverts *inside* a branch before merging, so the bad commit never becomes part of a merged PR at all.
+I spent the first morning on reverts, which is the obvious path and the wrong one. Searching PR titles for "revert" returned two hits and both were false — one was a hand-written re-implementation, the other a rename. That is worse than finding nothing: for an hour I had two rows in a spreadsheet that looked like data.
 
-What worked was blame. For each fix PR, take the lines it deleted, blame them against the parent commit, and map the result back to the PR that wrote them — SZZ, more or less. On a random sample of 24 fix PRs, 37.5% produced a clean, unambiguous parent. I read six of them by hand: four clearly right, one clearly wrong, one arguable. Call it 70-80% precision, which is enough with a human pass on top.
+The real revert commits number six in six months, and only one resolves cleanly back to the PR that introduced the problem. This team reverts *inside* a branch before merging, so the bad commit never becomes part of a merged PR at all.
+
+What worked was blame. For each fix PR, take the lines it deleted, blame them against the parent commit, and map the result back to the PR that wrote them — SZZ, more or less. On a random sample of 24 fix PRs, 37.5% produced a clean, unambiguous parent. I read six of them by hand: four clearly right, one clearly wrong, one arguable.
+
+Six cases is not a precision estimate. It is a smell test, and I want to be honest that the 70-80% number I have been quoting rests on it. The one clear miss is instructive: the fix repaired a test whose assumption an earlier change had broken, and blame pointed confidently at the PR that had *written* the test. SZZ blaming the victim. Anything built on this needs a human reading every pair, which is fine at 40 and impossible at 400.
 
 The failure mode is worth naming, because it is not SZZ's fault. Both repositories were re-imported as a single squashed commit earlier this year, so any blame that lands on older code resolves to that one import — which carries the entire pre-history and tells you nothing. Nine of the eleven degenerate cases were that. There is a hard floor under this kind of archaeology, and it is wherever your repo's history was last flattened.
 
 The strongest signal was something else entirely: 28 fix PRs whose description explicitly names the earlier PR that broke the thing. Validated against merge order and file overlap, 27 of those 28 are correct pairings. Near-oracle labels, written by hand, for free.
 
-Except they are not written by hand. Those descriptions are that thorough *because* the team writes them with agent help. The property I would be measuring is the same property that made the measurement possible — which is a lovely result and a serious problem, and it means none of this transfers to a repository that works differently.
+## The labels exist because of the thing I was trying to measure
+
+Except they are not written by hand.
+
+Those 28 descriptions are that thorough because the team writes them with agent help. A typical one says, in the body of the fix, that the earlier PR closed the leak past the end of a tenant's own records but left it open inside the block — naming the exact boundary the first attempt got wrong. That is a better defect label than I could have written from the outside, and no human sat down and typed it unassisted.
+
+Sit with that for a second. My best ground truth is a *product* of agent-assisted work. The variable I wanted to study is the same variable that generated my measuring instrument.
+
+Two consequences, and neither is small. The first is that my labels are not independent of my treatment — the very repositories where agents write thorough descriptions are the only repositories where this method works, so I cannot use them to ask whether agent-written PRs are worse. The second is that none of it transfers. A team that writes terse PR descriptions has no ground truth at all here, which means this method finds defects exactly where the culture already documents them, and goes blind everywhere else.
+
+I did not see this until I had already built the extraction script and was pleased with it. That is the part I would warn someone about: a signal that is unusually clean is worth being suspicious of, because clean signals usually mean something upstream is generating them for you.
 
 ## Check three: is there enough signal to detect anything?
 
@@ -120,9 +132,9 @@ I read a random sample of 18 review threads and sorted them by what they actuall
 
 So counting threads does not count quality. An evidence pack could easily *raise* the thread count while changing nothing that matters — and process chatter is exactly the category it would inflate.
 
-More than half of merged pull requests were never discussed by anyone. The median review generates no written trace at all. Whatever review is doing here, most of it is invisible to every metric I could reach.
+Which raises a harder question than the one I started with. If the median review leaves no written trace, then whatever review is actually doing here is invisible to every metric I could reach — including the ones I was about to build an experiment on top of.
 
-Those are uncomfortable facts about a functioning team shipping real software, and they were sitting in an API that anyone could have queried at any point in the last six months.
+These are uncomfortable facts about a functioning team shipping real software, and they were sitting in an API that anyone could have queried at any point in the last six months.
 
 ## What this cost, and what it saved
 

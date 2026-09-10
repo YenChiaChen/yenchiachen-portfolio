@@ -221,8 +221,8 @@ const indexScript = () => `<script>
 const pageTitle = (text) => `<h1 class="tagtitle">${esc(text)}</h1>`;
 
 /** The shell every page is composed into. */
-const layout = ({ title, description, url, body, ogType = 'website', image = '', script = '' }) => `<!doctype html>
-<html lang="en">
+const layout = ({ title, description, url, body, ogType = 'website', image = '', script = '', lang = 'en' }) => `<!doctype html>
+<html lang="${esc(lang)}">
 <head>
 ${head({ title, description, url, ogType, image })}
 </head>
@@ -262,6 +262,7 @@ const postPage = (post) => layout({
   image: absoluteAsset(post.cover),
   body: postArticle(post),
   script: hasMermaid(post.body) ? mermaidScript() : '',
+  lang: post.lang,
 });
 
 const tagPage = (label, posts) => layout({
@@ -308,6 +309,7 @@ function loadPosts() {
         tags: Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : []),
         excerpt: data.excerpt || (text.length > 160 ? `${text.slice(0, 160)}…` : text),
         cover: data.cover || '',
+        lang: data.lang || 'en',
         draft: data.draft === true,
         body,
       };
