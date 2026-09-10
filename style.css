@@ -51,7 +51,17 @@ footer.site {
   padding: 0 24px;
 }
 
-header.site { padding-top: 56px; padding-bottom: 40px; }
+header.site {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 56px;
+  padding-bottom: 40px;
+}
+
+header.site nav a { color: var(--muted); font-size: 0.85rem; }
+header.site nav a:hover { color: var(--link); text-decoration: none; }
 
 .brand {
   font-size: 0.95rem;
@@ -349,3 +359,32 @@ pre code {
 
 /* CJK needs more leading than Latin; Latin-only pages tighten up. */
 html[lang="en"] { --leading: 1.7; }
+
+/* about timeline: same two-column grid language as .bars */
+.timeline { margin: 32px 0 0; }
+
+.timeline .tl {
+  display: grid;
+  grid-template-columns: 6.5em 1fr;
+  gap: 20px;
+  align-items: baseline;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.timeline .tl:last-child { border-bottom: 1px solid var(--rule); }
+
+.timeline .tl-year {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.timeline .tl-what { font-size: 0.95rem; }
+
+.timeline .tl-where { color: var(--muted); }
+
+@media (max-width: 600px) {
+  .timeline .tl { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
+}

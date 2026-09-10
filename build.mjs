@@ -64,7 +64,10 @@ const tagSlug = (tag) => String(tag).trim().toLowerCase()
   .replace(/[/\\?#%:]/g, '-');
 
 /** URLs live in one place so hrefs and emitted directories can never drift. */
-const postPath = (slug) => `/p/${encodeURIComponent(slug)}/`;
+// Posts live under /p/; a page (frontmatter `page: true`) sits at the root.
+const postPath = (post) => (post.page
+  ? `/${encodeURIComponent(post.slug)}/`
+  : `/p/${encodeURIComponent(post.slug)}/`);
 const tagPath = (tag) => `/tag/${encodeURIComponent(tagSlug(tag))}/`;
 const absolute = (p) => `${SITE}${p}`;
 
@@ -118,6 +121,7 @@ const head = ({ title, description, url, ogType, image }) => join(
 
 const siteHeader = () => `<header class="site">
   <a class="brand" href="/">${esc(AUTHOR)}</a>
+  <nav><a href="/about/">About</a></nav>
 </header>`;
 
 const siteFooter = () => `<footer class="site">
@@ -136,7 +140,7 @@ const dateLine = (date) => (date
 
 /** Thumbnail on a list entry. Absent cover simply renders nothing. */
 const thumb = (post) => (post.cover
-  ? `<a class="thumb" href="${esc(postPath(post.slug))}" tabindex="-1" aria-hidden="true"><img src="${esc(post.cover)}" alt="" loading="lazy"></a>`
+  ? `<a class="thumb" href="${esc(postPath(post))}" tabindex="-1" aria-hidden="true"><img src="${esc(post.cover)}" alt="" loading="lazy"></a>`
   : '');
 
 /** Free-text haystack for the client-side search box. */
@@ -147,7 +151,7 @@ const postCard = (post, { showTags = true } = {}) => `<article class="card"
   data-tags="${esc(post.tags.map(tagSlug).join(' '))}"
   data-text="${esc(searchText(post))}">
   <div class="card-body">
-    <h2><a href="${esc(postPath(post.slug))}">${esc(post.title)}</a></h2>
+    <h2><a href="${esc(postPath(post))}">${esc(post.title)}</a></h2>
     ${dateLine(post.date)}
     <p class="excerpt">${esc(post.excerpt)}</p>
     ${showTags ? tagChips(post.tags) : ''}
@@ -257,7 +261,7 @@ const indexPage = (posts, tags) => layout({
 const postPage = (post) => layout({
   title: post.title,
   description: post.excerpt,
-  url: absolute(postPath(post.slug)),
+  url: absolute(postPath(post)),
   ogType: 'article',
   image: absoluteAsset(post.cover),
   body: postArticle(post),
@@ -309,6 +313,7 @@ function loadPosts() {
         tags: Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : []),
         excerpt: data.excerpt || (text.length > 160 ? `${text.slice(0, 160)}…` : text),
         cover: data.cover || '',
+        page: data.page === true,
         lang: data.lang || 'en',
         draft: data.draft === true,
         body,
@@ -328,7 +333,9 @@ function write(relPath, html) {
   fs.writeFileSync(out, html);
 }
 
-const posts = loadPosts();
+const all = loadPosts();
+const pages = all.filter((entry) => entry.page);
+const posts = all.filter((entry) => !entry.page);
 
 const byTag = new Map();
 for (const post of posts) {
@@ -345,10 +352,11 @@ fs.mkdirSync(DIST, { recursive: true });
 
 write('index.html', indexPage(posts, allTags));
 for (const post of posts) write(`p/${post.slug}/index.html`, postPage(post));
+for (const page of pages) write(`${page.slug}/index.html`, postPage(page));
 for (const [slug, { label, posts: tagged }] of byTag) write(`tag/${slug}/index.html`, tagPage(label, tagged));
 
 fs.copyFileSync(path.join(root, 'style.css'), path.join(DIST, 'style.css'));
 if (fs.existsSync(IMAGES)) fs.cpSync(IMAGES, path.join(DIST, 'images'), { recursive: true });
 if (fs.existsSync(PUBLIC)) fs.cpSync(PUBLIC, DIST, { recursive: true });
 
-console.log(`built ${posts.length} post(s), ${byTag.size} tag page(s) → dist/`);
+console.log(`built ${posts.length} post(s), ${pages.length} page(s), ${byTag.size} tag page(s) → dist/`);
