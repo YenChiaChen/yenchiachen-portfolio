@@ -1,13 +1,9 @@
 ---
-title: About
-page: true
-tags: []
+title: Yen-Chia Chen
 excerpt: Yen-Chia Chen. Eleven years a competitive tennis player, then a software engineer. Currently full-stack at an AI startup in Taipei.
 ---
 
-Software engineer in Taipei, currently full-stack at an AI startup.
-
-Before engineering I was an athlete. Eleven years on a tennis scholarship, and still competing in 2022. What carried over is a low tolerance for claims nobody has checked, which is most of what I write about here.
+Hi there 👋, I'm Yenchia from Taipei, Taiwan. I love playing tennis, drinking coffee, and building piles of pointless little apps and games. Thanks to vibe coding, I can no longer write a red-black tree by hand, but it has also set me free to make whatever I want!
 
 <div class="timeline">
 <div class="tl"><span class="tl-year">1998</span><span class="tl-what">Born in Taipei</span></div>
